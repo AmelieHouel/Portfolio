@@ -1,0 +1,111 @@
+/* fonts */ 
+
+ @font-face {
+  font-family: "Big john pro";
+  src: url("/assets/fonts/bigjohnpro-bold.otf") format("otf"), url("assets/fonts/bigjohnpro-bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Big john pro";
+  src: url("/assets/fonts/bigjohnpro-light.otf") format("otf"), url("assets/fonts/bigjohnpro-light.woff") format("woff");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Big john pro";
+  src: url("/assets/fonts/bigjohnpro-regular.otf") format("otf"), url("assets/fonts/bigjohnpro-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* flexbox */ 
+
+.between { 
+  justify-content: space-between;
+}
+.center {
+  justify-content: center;
+}
+
+.flex {
+  display: flex; 
+  align-items: center;
+}
+
+
+/*body*/
+
+body {
+  background-color: #919FC5; 
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Big john pro", sans-serif;
+}
+
+/*header*/
+
+header {
+  height: 15vh;
+}
+
+.logoPerso {
+  margin-left: 30px; 
+}
+
+
+ul {
+  margin-right: 114px; 
+}
+
+li {
+  list-style-type: none;
+  margin: 50px; 
+  font-size: 20px;
+  color: white; 
+}
+
+/* heroHeader */
+
+.heroHeader {
+  height: 85vh; 
+  color: white; 
+  position: relative;
+}
+
+h1 {
+  font-weight: bold; 
+  font-size: 40px;
+}
+
+h2 {
+ font-weight: normal;
+ font-size: 30px; 
+}
+
+h3 {
+  font-weight:lighter;
+  font-size: 26px; 
+}
+
+.formeHero {
+  padding-left: 5%;
+}
+
+.line {
+  position: absolute; 
+  bottom: -8%; 
+}
+
+
+
+
+/*@media screen and (max-width: 900px) {
+  body {
+    background-color: black;
+  }
+}*/
+
