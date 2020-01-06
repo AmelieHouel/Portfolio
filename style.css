@@ -26,13 +26,21 @@
 .between { 
   justify-content: space-between;
 }
+
+.evenly {
+  justify-content: space-evenly;
+}
 .center {
   justify-content: center;
+  align-items: center;
 }
 
 .flex {
   display: flex; 
-  align-items: center;
+}
+
+.column {
+flex-direction: column;
 }
 
 
@@ -49,7 +57,8 @@ body {
 /*header*/
 
 header {
-  height: 15vh;
+
+  width: 100vw;
 }
 
 .logoPerso {
@@ -63,7 +72,7 @@ ul {
 
 li {
   list-style-type: none;
-  margin: 50px; 
+  padding: 5%;
   font-size: 20px;
   color: white; 
 }
@@ -97,11 +106,72 @@ h3 {
 
 .line {
   position: absolute; 
-  bottom: -8%; 
+  bottom: -15%; 
 }
 
+.portrait {
+  width: 325px;
+  height: auto;
+  border-radius: 20px;
+}
 
+.presentation {
+  height: 100vh;
+  position: relative;
+}
 
+.whiteContainer {
+  background-color: white;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 30px;
+  align-items: center;
+
+}
+.textPresentation{
+  width: 40%;
+  height: auto;
+}
+
+.textPresentation p{
+  font-size: 20px;
+}
+
+.textPresentation h2 {
+  color: #8FCBD3;
+  font-weight: bold;
+}
+
+.aside {
+  position: absolute;
+  background-color: #8FCBD3;
+  padding: 3% 7%;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  bottom: -15%;
+  right: 17%;
+}
+
+.aside .triangle {
+  padding-top: 20%;
+}
+
+.projets {
+  width: 100vw;
+  background-color: white; 
+  margin-top: 15%;
+  text-align: center;
+}
+.projets h2 {
+  padding-top: 5%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #8FCBD3;
+}
+.images {
+  padding: 5%; 
+}
 
 /*@media screen and (max-width: 900px) {
   body {
