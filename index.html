@@ -56,20 +56,52 @@
   <section class="projets">
     <h2>Projets</h2>
     <div class="images flex evenly">
-      <img src="assets/desktop/projets/Photo 1.jpg" alt="">
+      <img src="assets/desktop/projets/photo 1.jpg" alt="">
       <img src="assets/desktop/projets/photo 2.jpg" alt="">
     </div>
     <div class="images flex evenly">
-      <img src="assets/desktop/projets/Photo 3.jpg" alt="">
-      <img src="assets/desktop/projets/Photo 4.jpg" alt="">
+      <img src="assets/desktop/projets/photo 3.jpg" alt="">
+      <img src="assets/desktop/projets/photo 4.jpg" alt="">
     </div>
     <div class="images flex evenly">
-      <img src="assets/desktop/projets/Photo 5.jpg" alt="">
-      <img src="assets/desktop/projets/Photo 6.jpg" alt="">
+      <img src="assets/desktop/projets/photo 5.jpg" alt="">
+      <img src="assets/desktop/projets/photo 6.jpg" alt="">
+    </div>
+  </section>
+  <section class=" contacts flex column center">
+    <img class="lineContact" src="assets/desktop/contacts/Line-contact.svg" alt="line-deco">
+    <img class="formeContact" src="assets/desktop/contacts/forme-contact.svg" alt="forme-contacts">
+    <div class=" informations">
+      <h2>Contacts</h2>
+      <p>Mail: amelie.k.houel@gmail.com</p>
+      <p>Numéro : 06.29.66.03.76</p>
+      <h2>Réseaux sociaux</h2>
+      <div class="social"> 
+        <img class="iconSocial" src="assets/desktop/contacts/Github.svg" alt="icon-github">
+        <img class="iconSocial" src="assets/desktop/contacts/dribble.svg" alt="icon-dribbble">
+        <img class="iconSocial" src="assets/desktop/contacts/Linkedin.svg" alt="icon-linkedin">
+        <img class="iconSocial" src="assets/desktop/contacts/Béhance.svg" alt="icon-behance">
+      </div>
     </div>
   </section>
 
-  <footer></footer>
+  <footer class="footer"> 
+    <form class="flex" action="/ma-page-de-traitement" method="post">
+      <div>
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="user_name">
+      </div>
+      <div>
+          <label for="mail">e-mail :</label>
+          <input type="email" id="mail" name="user_mail">
+      </div>
+      <div>
+          <label for="msg">Message :</label>
+          <textarea id="msg" name="user_message"></textarea>
+      </div>
+      <button class="style" type="button">Envoyer</button>
+  </form>
+  </footer>
 
 </body>
 </html>

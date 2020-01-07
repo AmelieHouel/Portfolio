@@ -59,6 +59,9 @@ body {
 header {
 
   width: 100vw;
+  height: 15vh; 
+  z-index: 1; 
+  background-color: #919FC5;
 }
 
 .logoPerso {
@@ -106,8 +109,10 @@ h3 {
 
 .line {
   position: absolute; 
-  bottom: -15%; 
+  bottom: -10%; 
 }
+
+/*présentation*/
 
 .portrait {
   width: 325px;
@@ -123,7 +128,7 @@ h3 {
 .whiteContainer {
   background-color: white;
   width: 80vw;
-  height: 80vh;
+  height: 90vh;
   border-radius: 30px;
   align-items: center;
 
@@ -157,6 +162,8 @@ h3 {
   padding-top: 20%;
 }
 
+/*Projets*/ 
+
 .projets {
   width: 100vw;
   background-color: white; 
@@ -172,6 +179,44 @@ h3 {
 .images {
   padding: 5%; 
 }
+
+/*contacts*/
+
+.formeContact {
+  position: absolute; 
+  z-index: 1;
+}
+
+.informations {
+  z-index:2; 
+}
+
+.informations h2 {
+  color: #8FCBD3; 
+  font-weight: bold;
+}
+
+.contacts {
+  height: 90vh; 
+  position: relative; 
+}
+
+.lineContact {
+  position: absolute; 
+  top:0%; 
+}
+
+footer {
+  height: 10vh; 
+  align-items: center;
+}
+
+.up {
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+
 
 /*@media screen and (max-width: 900px) {
   body {
