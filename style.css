@@ -182,7 +182,7 @@ h3 {
 
 /*contacts*/
 
-.formeContact {
+.forme-contact {
   position: absolute; 
   z-index: 1;
 }
@@ -201,7 +201,7 @@ h3 {
   position: relative; 
 }
 
-.lineContact {
+.line-contact {
   position: absolute; 
   top:0%; 
 }
