@@ -43,6 +43,10 @@
 flex-direction: column;
 }
 
+.around {
+  justify-content: space-around;
+}
+
 
 /*body*/
 
@@ -182,29 +186,68 @@ h3 {
 
 /*contacts*/
 
-.forme-contact {
-  position: absolute; 
-  z-index: 1;
-}
-
-.informations {
-  z-index:2; 
-}
-
-.informations h2 {
-  color: #8FCBD3; 
-  font-weight: bold;
-}
 
 .contacts {
   height: 90vh; 
   position: relative; 
 }
 
+.forme-contact {
+  position: absolute; 
+  margin-left: 2%;
+  z-index: 1;
+}
+
+.form {
+  z-index:2; 
+}
+
+.form h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #8FCBD3;
+}
+
+label {
+  font-size: 18px;
+  font-weight: lighter; 
+  color : #919FC5; 
+  margin : 2%; 
+}
+
+input {
+  width: 210px;
+  height: 42px; 
+  border-radius: 10px;
+  border: 2px solid #8FCBD3;
+}
+
+textarea {
+  width: 210px;
+  height: 106px;
+  border-radius: 10px;
+  border: 2px solid #8FCBD3;
+}
+
+button {
+  font-family: 'Big john pro', sans-serif;
+  font-size: 18px; 
+  font-weight: bold; 
+  border-radius: 5px; 
+  background-color: #919FC5;
+  color: white; 
+  border: 1px solid #919FC5;
+  margin-top: 5%;
+  padding: 2% 10%; 
+}
+
 .line-contact {
   position: absolute; 
-  top:0%; 
+  top: -1%; 
 }
+
+
+/*footer*/
 
 footer {
   height: 10vh; 
@@ -213,7 +256,24 @@ footer {
 
 .up {
   margin-left: 2%;
-  margin-bottom: 2%;
+}
+
+.social {
+  margin-right: 2%;
+}
+
+.iconSocial {
+  padding: 3%;
+}
+
+.up {
+  color: white; 
+}
+
+.up p {
+  font-size: 20px; 
+  font-weight: lighter; 
+  margin-left: 10%; 
 }
 
 
