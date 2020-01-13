@@ -59,28 +59,24 @@ body {
   font-family: "Big john pro", sans-serif;
 }
 
+
 /*header*/
 
 header {
 
   width: 100vw;
-  height: 15vh; 
+  height: auto; 
   z-index: 1; 
   background-color: #919FC5;
 }
 
-.logoPerso {
-  margin-left: 30px; 
-}
-
-
-ul {
-  margin-right: 114px; 
+.logo-Perso {
+  padding: 3%; 
 }
 
 li {
   list-style-type: none;
-  padding: 5%;
+  padding: 5px;
   font-size: 20px;
   color: white; 
 }
@@ -91,7 +87,7 @@ li {
 
 /* heroHeader */
 
-.heroHeader {
+.hero-Header {
   height: 85vh; 
   color: white; 
   position: relative;
@@ -112,8 +108,8 @@ h3 {
   font-size: 26px; 
 }
 
-.formeHero {
-  padding-left: 5%;
+.forme-Hero {
+  padding-left: 20px;
 }
 
 .line {
@@ -134,24 +130,25 @@ h3 {
   position: relative;
 }
 
-.whiteContainer {
+.white-Container {
   background-color: white;
   width: 80vw;
-  height: 80vh;
+  height: 85vh;
   border-radius: 30px;
   align-items: center;
+  overflow: hidden;
 
 }
-.textPresentation{
+.text-Presentation{
   width: 40%;
   height: auto;
 }
 
-.textPresentation p{
+.text-Presentation p{
   font-size: 20px;
 }
 
-.textPresentation h2 {
+.text-Presentation h2 {
   color: #8FCBD3;
   font-weight: bold;
 }
@@ -159,12 +156,12 @@ h3 {
 .aside {
   position: absolute;
   background-color: #8FCBD3;
-  padding: 3% 7%;
+  padding: 2% 7%;
   border-radius: 15px;
   color: white;
-  font-size: 20px;
-  bottom: -15%;
-  right: 17%;
+  font-size: 25px;
+  bottom: -5%;
+  right: 22%;
 }
 
 .aside .triangle {
@@ -185,7 +182,13 @@ h3 {
   font-weight: bold;
   color: #8FCBD3;
 }
-.images {
+.pictures {
+  padding: 5%; 
+  width: 373;
+  height: auto; 
+}
+
+.individual-pic { 
   padding: 5%; 
 }
 
@@ -267,22 +270,37 @@ footer {
   margin-right: 2%;
 }
 
-.iconSocial {
+.icon-Social {
   padding: 3%;
 }
 
-.up {
+.up-container {
   color: white; 
+  align-items: center;
+  margin-left: 2%;
 }
 
-.up p {
+.up-container p {
   font-size: 20px; 
   font-weight: lighter; 
   margin-left: 10%; 
 }
 
 
+
 /* media queries */
+
+@media screen and (max-width: 1200px) {
+  .aside {
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .aside {
+    right: 15%;
+  }
+}
 
 
 @media screen and (max-width: 850px) {
@@ -301,21 +319,24 @@ footer {
 
 @media screen and (max-width: 800px) {
 
-  .whiteContainer { 
+  .white-Container { 
     flex-direction: column; 
     width: 100vw;
     height: auto; 
     border-radius: 0px;
+    padding-top: 7%;
+    padding-bottom: 7%;
   }
   
   /* HeroHeader */
   
-  .formeHero {
+  .forme-Hero {
     width: 219px; 
     height: auto; 
+    padding-top: 5%;
   }
 
-  .heroHeader {
+  .hero-Header {
     flex-direction: column;
   }
 
@@ -323,18 +344,41 @@ footer {
 
   .portrait {
     padding: 5%; 
-    width: 209px;
+    width: 309px;
     height: auto;
     border-radius: 50px;
   }
 
-  .textPresentation{
+  .text-Presentation{
     width: 80%;
     height: 80%;
   }
 
-  .images {
-    flex-direction: column;
+  .text-Presentation h2 {
+    text-align: center;
+  }
+
+  .pictures {
+    flex-wrap: wrap;
+  }
+
+  .individual-pic{
+    width: 200px; 
+    height: auto; 
+    padding: 5%; 
+  }
+
+  .aside {
+    bottom: -8%;
+    right: 18%;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  /*Projets*/
+
+  .projets {
+    margin-top: 20%;
   }
 
   /*contact*/
@@ -348,6 +392,18 @@ footer {
     padding: 10%;
     border-radius: 20px;
   }
+
+  /*footer*/
+
+  .icon-Social{
+    width: 40px;
+    height: 40px; 
+  }
+  .up {
+    width: 40px; 
+    height: 40px; 
+  }
+
 
 }
 
