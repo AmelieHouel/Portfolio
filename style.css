@@ -71,12 +71,16 @@ header {
 }
 
 .logo-Perso {
-  padding: 3%; 
+  padding: 20px; 
+}
+
+ul {
+  margin-right: 115px; 
 }
 
 li {
   list-style-type: none;
-  padding: 5px;
+  padding: 20px;
   font-size: 20px;
   color: white; 
 }
@@ -84,6 +88,8 @@ li {
 .burger {
   display: none; 
 }
+
+
 
 /* heroHeader */
 
@@ -114,7 +120,7 @@ h3 {
 
 .line {
   position: absolute; 
-  bottom: -10%; 
+  bottom: -70px; 
 }
 
 /*présentation*/
@@ -126,8 +132,7 @@ h3 {
 }
 
 .presentation {
-  height: 100vh;
-  position: relative;
+  
 }
 
 .white-Container {
@@ -136,16 +141,19 @@ h3 {
   height: 85vh;
   border-radius: 30px;
   align-items: center;
-  overflow: hidden;
-
+  
+  margin-top: 30px; 
+  position: relative;
 }
-.text-Presentation{
+
+.text-Presentation {
   width: 40%;
   height: auto;
 }
 
-.text-Presentation p{
+.text-Presentation p {
   font-size: 20px;
+  text-align: justify;
 }
 
 .text-Presentation h2 {
@@ -156,40 +164,41 @@ h3 {
 .aside {
   position: absolute;
   background-color: #8FCBD3;
-  padding: 2% 7%;
+  padding: 30px 100px;
   border-radius: 15px;
   color: white;
   font-size: 25px;
-  bottom: -5%;
-  right: 22%;
+  bottom: -100px;
+  right: 400px;
 }
 
 .aside .triangle {
-  padding-top: 20%;
+  padding-top: 20px;
 }
 
 /*Projets*/ 
 
 .projets {
+
   width: 100vw;
   background-color: white; 
-  margin-top: 15%;
+  margin-top: 400px;
   text-align: center;
 }
+
 .projets h2 {
-  padding-top: 5%;
+  padding-top: 50px;
   font-size: 30px;
   font-weight: bold;
   color: #8FCBD3;
 }
+
 .pictures {
-  padding: 5%; 
-  width: 373;
-  height: auto; 
+  padding: 30px; 
 }
 
 .individual-pic { 
-  padding: 5%; 
+  padding: 20px; 
 }
 
 /*contacts*/
@@ -202,12 +211,12 @@ h3 {
 
 .forme-contact {
   position: absolute; 
-  margin-left: 2%;
+  margin-left: 20px;
   z-index: 1;
 }
 
 .form {
-  z-index:2; 
+  z-index: 2; 
 }
 
 .form h2 {
@@ -220,7 +229,7 @@ label {
   font-size: 18px;
   font-weight: lighter; 
   color : #919FC5; 
-  margin : 2%; 
+  margin : 10px; 
 }
 
 input {
@@ -246,12 +255,12 @@ button {
   color: white; 
   border: 1px solid #919FC5;
   margin-top: 5%;
-  padding: 2% 10%; 
+  padding: 10px 30px; 
 }
 
 .line-contact {
   position: absolute; 
-  top: -1%; 
+  top: -2px; 
 }
 
 
@@ -291,15 +300,17 @@ footer {
 /* media queries */
 
 @media screen and (max-width: 1200px) {
+
   .aside {
     right: 20%;
   }
+
 }
 
 @media screen and (max-width: 1000px) {
-  .aside {
-    right: 15%;
-  }
+
+
+
 }
 
 
@@ -319,15 +330,6 @@ footer {
 
 @media screen and (max-width: 800px) {
 
-  .white-Container { 
-    flex-direction: column; 
-    width: 100vw;
-    height: auto; 
-    border-radius: 0px;
-    padding-top: 7%;
-    padding-bottom: 7%;
-  }
-  
   /* HeroHeader */
   
   .forme-Hero {
@@ -338,9 +340,20 @@ footer {
 
   .hero-Header {
     flex-direction: column;
+    height: 90vh; 
   }
 
   /* présentation */ 
+
+
+  .white-Container { 
+    flex-direction: column; 
+    width: 100vw;
+    height: auto; 
+    border-radius: 0px;
+    padding-top: 7%;
+    padding-bottom: 7%;
+  }
 
   .portrait {
     padding: 5%; 
@@ -353,6 +366,7 @@ footer {
     width: 80%;
     height: 80%;
   }
+
 
   .text-Presentation h2 {
     text-align: center;
@@ -369,10 +383,9 @@ footer {
   }
 
   .aside {
-    bottom: -8%;
-    right: 18%;
-    padding-left: 20%;
-    padding-right: 20%;
+    position: initial;
+    padding: 10px 100px;
+    text-align: center;
   }
 
   /*Projets*/
@@ -395,16 +408,75 @@ footer {
 
   /*footer*/
 
-  .icon-Social{
+  .icon-Social {
     width: 40px;
     height: 40px; 
   }
+
+
   .up {
     width: 40px; 
     height: 40px; 
   }
 
+}
 
+@media screen and (max-width: 450px) {
+  .aside {
+    font-size: 18px; 
+    padding: 10px 60px; 
+  }
 }
 
 
+/* Ipad */
+
+@media screen and (width: 768px) and (height: 1024px) {
+
+  /* présentation */
+
+  .white-Container {
+    padding-bottom: 80px;
+  }
+
+  .portrait {
+    width: 325px;
+  }
+
+  .text-Presentation p {
+    margin: 10px 130px;
+  }
+
+  .aside {
+    padding: 10px 80px;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  /* projets*/
+
+  .projets {
+    margin-top: 300px; 
+  }
+
+}
+
+/* Ipad pro */ 
+
+@media screen and (width: 1024px) and (height: 1366px) {
+
+  /* Hero Header */
+
+  .line {
+    position: absolute; 
+    bottom: -90px; 
+  }
+
+  /* présentation */
+
+  .white-Container {
+    height: 65vh;
+    margin-top: 90px; 
+  }
+
+}
