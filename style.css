@@ -70,13 +70,16 @@ header {
   background-color: #919FC5;
 }
 
+
 .logo-Perso {
   padding: 20px; 
 }
 
+
 ul {
   margin-right: 115px; 
 }
+
 
 li {
   list-style-type: none;
@@ -99,29 +102,35 @@ li {
   position: relative;
 }
 
+
 h1 {
   font-weight: bold; 
   font-size: 40px;
 }
+
 
 h2 {
  font-weight: normal;
  font-size: 30px; 
 }
 
+
 h3 {
   font-weight:lighter;
   font-size: 26px; 
 }
 
+
 .forme-Hero {
   padding-left: 20px;
 }
+
 
 .line {
   position: absolute; 
   bottom: -70px; 
 }
+
 
 /*présentation*/
 
@@ -131,17 +140,12 @@ h3 {
   border-radius: 20px;
 }
 
-.presentation {
-  
-}
-
 .white-Container {
   background-color: white;
   width: 80vw;
   height: 85vh;
   border-radius: 30px;
   align-items: center;
-  
   margin-top: 30px; 
   position: relative;
 }
@@ -176,6 +180,7 @@ h3 {
   padding-top: 20px;
 }
 
+
 /*Projets*/ 
 
 .projets {
@@ -201,12 +206,13 @@ h3 {
   padding: 20px; 
 }
 
-/*contacts*/
 
+/*contacts*/
 
 .contacts {
   height: 90vh; 
   position: relative; 
+  overflow: hidden;
 }
 
 .forme-contact {
@@ -304,12 +310,6 @@ footer {
   .aside {
     right: 20%;
   }
-
-}
-
-@media screen and (max-width: 1000px) {
-
-
 
 }
 
@@ -419,13 +419,47 @@ footer {
     height: 40px; 
   }
 
+
 }
 
 @media screen and (max-width: 450px) {
+
+  /* Hero Header */ 
+
+  h1 {
+    font-size: 35px;
+  }
+  
+  
+  h2 {
+   font-size: 30px; 
+  }
+  
+  
+  h3 {
+    font-size: 26px; 
+  }
+
+  .line {
+    bottom: -50px; 
+  }
+
+  /* Présentation */ 
+
   .aside {
     font-size: 18px; 
     padding: 10px 60px; 
   }
+
+  /* Contact */ 
+
+  .line-contact {
+    top: -50px; 
+  }
+
+  
+  
+
 }
 
 
@@ -480,3 +514,25 @@ footer {
   }
 
 }
+
+@media screen and (width: 320px) and (height: 568px) {
+
+  /* Header */ 
+
+  
+  /* Hero Header */
+
+
+  /* Présentation */
+
+
+  /* Projets */
+ 
+
+  /* Contacts */
+
+  /* footer */
+
+}
+
+
