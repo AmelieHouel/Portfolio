@@ -21,6 +21,19 @@
   font-style: normal;
 }
 
+/* Animations */ 
+
+/*@keyframes changefontsize {
+  from {
+    font-size: 25px;
+  }
+
+  to {
+    font-size: 26px;
+  }
+}*/
+
+
 /* flexbox */ 
 
 .between { 
@@ -102,12 +115,14 @@ li {
   position: relative;
 }
 
+.title {
+  line-height: 30px;
+}
 
 h1 {
   font-weight: bold; 
   font-size: 40px;
 }
-
 
 h2 {
  font-weight: normal;
@@ -123,6 +138,7 @@ h3 {
 
 .forme-Hero {
   padding-left: 20px;
+  margin-left: 20px;
 }
 
 
@@ -173,18 +189,28 @@ h3 {
   color: white;
   font-size: 25px;
   bottom: -100px;
-  right: 400px;
+  right: 20%;
 }
 
 .aside .triangle {
   padding-top: 20px;
 }
 
+.aside a {
+  text-decoration: none;
+  color: white; 
+}
+
+.aside a:hover {
+  animation-duration: 0.5s;
+  animation-name: changefontsize;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
 
 /*Projets*/ 
 
 .projets {
-
   width: 100vw;
   background-color: white; 
   margin-top: 400px;
@@ -305,13 +331,7 @@ footer {
 
 /* media queries */
 
-@media screen and (max-width: 1200px) {
 
-  .aside {
-    right: 20%;
-  }
-
-}
 
 
 @media screen and (max-width: 850px) {
@@ -341,6 +361,10 @@ footer {
   .hero-Header {
     flex-direction: column;
     height: 90vh; 
+  }
+
+  .line{
+    bottom: -50px; 
   }
 
   /* présentation */ 
@@ -391,7 +415,7 @@ footer {
   /*Projets*/
 
   .projets {
-    margin-top: 20%;
+    margin-top: 150px;
   }
 
   /*contact*/
@@ -430,18 +454,12 @@ footer {
     font-size: 35px;
   }
   
-  
   h2 {
    font-size: 30px; 
   }
   
-  
   h3 {
     font-size: 26px; 
-  }
-
-  .line {
-    bottom: -50px; 
   }
 
   /* Présentation */ 
@@ -456,9 +474,6 @@ footer {
   .line-contact {
     top: -50px; 
   }
-
-  
-  
 
 }
 
@@ -515,24 +530,126 @@ footer {
 
 }
 
-@media screen and (width: 320px) and (height: 568px) {
+@media screen and (max-width: 320px) and (min-height: 568px) {
 
   /* Header */ 
+
+  header {
+    width: 100vw;
+    height: auto; 
+    z-index: 1; 
+    background-color: #919FC5;
+  }
+  
+  
+  .logo-Perso {
+    width: 50px;
+    height: auto;
+    padding: 25px;
+  }
 
   
   /* Hero Header */
 
+  .forme-Hero {
+    width: 150px; 
+    height: auto;
+  }
+
+  .title {
+    text-align: center;
+    line-height: 20px;
+  }
+
+  h1 {
+    font-weight: bold; 
+    font-size: 30px;
+  }
+  
+  
+  h2 {
+   font-weight: normal;
+   font-size: 25px; 
+  }
+  
+  
+  h3 {
+    font-weight:lighter;
+    font-size: 20px; 
+  }
 
   /* Présentation */
+  
+  .portrait {
+    width: 200px;
+    height: auto; 
+  }
 
 
   /* Projets */
+
+  .projets h2 {
+    font-size: 25px;
+  }
  
 
   /* Contacts */
 
+  label {
+    font-size: 16px;
+    font-weight: lighter; 
+    color : #919FC5; 
+    margin : 10px; 
+  }
+  
+  input {
+    width: 200px;
+    height: 35px; 
+    border-radius: 10px;
+    border: 2px solid #8FCBD3;
+  }
+  
+  textarea {
+    width: 200px;
+    height: 80px;
+    border-radius: 10px;
+    border: 2px solid #8FCBD3;
+  }
+  
+  button {
+    font-family: 'Big john pro', sans-serif;
+    font-size: 16px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    background-color: #919FC5;
+    color: white; 
+    border: 1px solid #919FC5;
+    margin-top: 5%;
+    padding: 10px 20px; 
+  }
+  
+  .line-contact {
+    position: absolute; 
+    top: -150px; 
+  }
+
+
   /* footer */
 
+  .social {
+    justify-content: center;
+    align-items: center;
+    width: 100vw; 
+  }
+
+  .up {
+    display: none; 
+  }
+
+  .up-container p {
+    display: none; 
+  }
 }
+
 
 
