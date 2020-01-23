@@ -23,124 +23,130 @@
 
 /* Animations */ 
 
-/*@keyframes changefontsize {
-  from {
-    font-size: 25px;
+@keyframes cursorChanged {
+  0% {
+    transform: scale(1.3);
   }
 
-  to {
-    font-size: 26px;
+  50% {
+    transform: scale(1);
   }
-}*/
+  100% {
+    transform: scale(1.3);
+  }
+}
 
 
 /* flexbox */ 
 
-.between { 
-  justify-content: space-between;
-}
+.flex {display: flex;}
+.center {justify-content: center; align-items: center;}
+.between {justify-content: space-between;}
+.evenly {justify-content: space-evenly;}
+.column {flex-direction: column;}
 
-.evenly {
-  justify-content: space-evenly;
-}
+/* background-color & color */
 
-.center {
-  justify-content: center;
-  align-items: center;
-}
+.bg-purple {background-color: #919FC5;}
+.bg-blue {background-color: #8FCBD3;}
+.bg-white {background-color: white;}
 
-.flex {
-  display: flex; 
-}
+.text-purple {color: #919FC5;}
+.text-blue {color:#8FCBD3;}
+.text-white {color:white;}
 
-.column {
-flex-direction: column;
-}
+/* Font */ 
 
-.around {
-  justify-content: space-around;
-}
-
+.bold {font-weight: bold;}
+.light {font-weight: lighter;}
 
 /*body*/
 
+* {cursor: none;}
+
+.cursor {
+  pointer-events: none; 
+  position: absolute; 
+  width: 40px;
+  height: 40px; 
+  mix-blend-mode: difference;
+  background: #8FCBD3; 
+  z-index: 5; 
+  border-radius: 50px;
+  transition: transform 0.1s;
+}
+
+.cursor.hover {
+  animation-duration: 0.8s;
+  animation-name: cursorChanged;
+  animation-iteration-count: infinite;
+}
+
 body {
-  background-color: #919FC5; 
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: "Big john pro", sans-serif;
+  color: white; 
+}
+
+a {
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+a:hover {
+  transform: scale(1.1);
 }
 
 
 /*header*/
 
+
 header {
-
   width: 100vw;
-  height: auto; 
-  z-index: 1; 
-  background-color: #919FC5;
+  height: auto;
 }
 
+.logo-Perso {padding: 20px;}
 
-.logo-Perso {
-  padding: 20px; 
-}
-
-
-ul {
-  margin-right: 115px; 
-}
-
+ul {margin-right: 115px;}
 
 li {
   list-style-type: none;
   padding: 20px;
   font-size: 20px;
-  color: white; 
 }
 
-.burger {
-  display: none; 
-}
-
+.burger {display: none;}
 
 
 /* heroHeader */
 
+
 .hero-Header {
   height: 85vh; 
-  color: white; 
   position: relative;
 }
 
-.title {
-  line-height: 30px;
-}
+.title {line-height: 30px;}
 
-h1 {
-  font-weight: bold; 
-  font-size: 40px;
-}
+h1 {font-size: 40px;}
 
 h2 {
  font-weight: normal;
  font-size: 30px; 
 }
 
-
 h3 {
-  font-weight:lighter;
+  font-weight: lighter;
   font-size: 26px; 
 }
-
 
 .forme-Hero {
   padding-left: 20px;
   margin-left: 20px;
 }
-
 
 .line {
   position: absolute; 
@@ -150,6 +156,7 @@ h3 {
 
 /*présentation*/
 
+
 .portrait {
   width: 325px;
   height: auto;
@@ -157,7 +164,6 @@ h3 {
 }
 
 .white-Container {
-  background-color: white;
   width: 80vw;
   height: 85vh;
   border-radius: 30px;
@@ -169,6 +175,7 @@ h3 {
 .text-Presentation {
   width: 40%;
   height: auto;
+  color: black; 
 }
 
 .text-Presentation p {
@@ -176,17 +183,10 @@ h3 {
   text-align: justify;
 }
 
-.text-Presentation h2 {
-  color: #8FCBD3;
-  font-weight: bold;
-}
-
 .aside {
   position: absolute;
-  background-color: #8FCBD3;
   padding: 30px 100px;
   border-radius: 15px;
-  color: white;
   font-size: 25px;
   bottom: -100px;
   right: 20%;
@@ -196,11 +196,6 @@ h3 {
   padding-top: 20px;
 }
 
-.aside a {
-  text-decoration: none;
-  color: white; 
-}
-
 .aside a:hover {
   animation-duration: 0.5s;
   animation-name: changefontsize;
@@ -208,11 +203,11 @@ h3 {
   animation-direction: alternate;
 }
 
+
 /*Projets*/ 
 
+
 .projets {
-  width: 100vw;
-  background-color: white; 
   margin-top: 400px;
   text-align: center;
 }
@@ -220,17 +215,11 @@ h3 {
 .projets h2 {
   padding-top: 50px;
   font-size: 30px;
-  font-weight: bold;
-  color: #8FCBD3;
 }
 
-.pictures {
-  padding: 30px; 
-}
+.pictures {padding: 30px;}
 
-.individual-pic { 
-  padding: 20px; 
-}
+.individual-pic {padding: 20px;}
 
 
 /*contacts*/
@@ -247,21 +236,14 @@ h3 {
   z-index: 1;
 }
 
-.form {
-  z-index: 2; 
-}
+.form {z-index: 2;}
 
-.form h2 {
-  font-size: 25px;
-  font-weight: bold;
-  color: #8FCBD3;
-}
+.form h2 {font-size: 25px;}
 
 label {
   font-size: 18px;
-  font-weight: lighter; 
-  color : #919FC5; 
-  margin : 10px; 
+  font-weight: lighter;  
+  margin: 10px; 
 }
 
 input {
@@ -283,7 +265,6 @@ button {
   font-size: 18px; 
   font-weight: bold; 
   border-radius: 5px; 
-  background-color: #919FC5;
   color: white; 
   border: 1px solid #919FC5;
   margin-top: 5%;
@@ -298,25 +279,26 @@ button {
 
 /*footer*/
 
+
 footer {
   height: 10vh; 
   align-items: center;
 }
 
-.up {
-  margin-left: 2%;
-}
+.up {margin-left: 2%;}
 
-.social {
-  margin-right: 2%;
-}
+.social {margin-right: 2%;}
 
 .icon-Social {
-  padding: 3%;
+  padding: 10px;
+  transition: transform 0.3s;
+}
+
+.icon-Social:hover {
+  transform: scale(1.1);
 }
 
 .up-container {
-  color: white; 
   align-items: center;
   margin-left: 2%;
 }
@@ -328,13 +310,11 @@ footer {
 }
 
 
-
 /* media queries */
 
 
-
-
 @media screen and (max-width: 850px) {
+
 
   ul, li {
     display: none; 
@@ -350,8 +330,13 @@ footer {
 
 @media screen and (max-width: 800px) {
 
+
+  h2 {text-align: center;}
+
+
   /* HeroHeader */
   
+
   .forme-Hero {
     width: 219px; 
     height: auto; 
@@ -363,9 +348,8 @@ footer {
     height: 90vh; 
   }
 
-  .line{
-    bottom: -50px; 
-  }
+  .line{bottom: -50px;}
+
 
   /* présentation */ 
 
@@ -375,13 +359,12 @@ footer {
     width: 100vw;
     height: auto; 
     border-radius: 0px;
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding: 50px 0px;
   }
 
   .portrait {
-    padding: 5%; 
-    width: 309px;
+    padding: 30px; 
+    width: 310px;
     height: auto;
     border-radius: 50px;
   }
@@ -391,20 +374,7 @@ footer {
     height: 80%;
   }
 
-
-  .text-Presentation h2 {
-    text-align: center;
-  }
-
-  .pictures {
-    flex-wrap: wrap;
-  }
-
-  .individual-pic{
-    width: 200px; 
-    height: auto; 
-    padding: 5%; 
-  }
+  .pictures {flex-wrap: wrap;}
 
   .aside {
     position: initial;
@@ -412,30 +382,31 @@ footer {
     text-align: center;
   }
 
+
   /*Projets*/
 
-  .projets {
-    margin-top: 150px;
+
+  .individual-pic{
+    width: 200px; 
+    height: auto;
   }
+
+  .projets {margin-top: 150px;}
+
 
   /*contact*/
 
-  .forme-contact {
-    display: none;
-  }
+
+  .forme-contact {display: none;}
 
   .form {
     background-color: white;
-    padding: 10%;
+    padding: 6%;
     border-radius: 20px;
   }
 
-  /*footer*/
 
-  .icon-Social {
-    width: 40px;
-    height: 40px; 
-  }
+  /*footer*/
 
 
   .up {
@@ -443,37 +414,35 @@ footer {
     height: 40px; 
   }
 
-
 }
+
 
 @media screen and (max-width: 450px) {
 
+
   /* Hero Header */ 
 
-  h1 {
-    font-size: 35px;
-  }
+
+  h1 {font-size: 35px;}
+
+  h2 {font-size: 30px;}
   
-  h2 {
-   font-size: 30px; 
-  }
-  
-  h3 {
-    font-size: 26px; 
-  }
+  h3 {font-size: 26px;}
+
 
   /* Présentation */ 
+
 
   .aside {
     font-size: 18px; 
     padding: 10px 60px; 
   }
 
+
   /* Contact */ 
 
-  .line-contact {
-    top: -50px; 
-  }
+
+  .line-contact {top: -50px;}
 
 }
 
@@ -482,19 +451,14 @@ footer {
 
 @media screen and (width: 768px) and (height: 1024px) {
 
+
   /* présentation */
 
-  .white-Container {
-    padding-bottom: 80px;
-  }
+  .white-Container {padding-bottom: 80px;}
 
-  .portrait {
-    width: 325px;
-  }
+  .portrait {width: 325px;}
 
-  .text-Presentation p {
-    margin: 10px 130px;
-  }
+  .text-Presentation p {margin: 10px 130px;}
 
   .aside {
     padding: 10px 80px;
@@ -504,24 +468,29 @@ footer {
 
   /* projets*/
 
-  .projets {
-    margin-top: 300px; 
-  }
+
+  .projets {margin-top: 300px;}
 
 }
 
+
 /* Ipad pro */ 
+
 
 @media screen and (width: 1024px) and (height: 1366px) {
 
+
   /* Hero Header */
+
 
   .line {
     position: absolute; 
     bottom: -90px; 
   }
 
+
   /* présentation */
+
 
   .white-Container {
     height: 65vh;
@@ -530,17 +499,25 @@ footer {
 
 }
 
+
+
 @media screen and (max-width: 320px) and (min-height: 568px) {
 
+
+  h1 {font-size: 30px;}
+  
+  h2 {font-size: 25px;}
+  
+  h3 {font-size: 20px;}
+
+
   /* Header */ 
+
 
   header {
     width: 100vw;
     height: auto; 
-    z-index: 1; 
-    background-color: #919FC5;
   }
-  
   
   .logo-Perso {
     width: 50px;
@@ -550,6 +527,7 @@ footer {
 
   
   /* Hero Header */
+
 
   .forme-Hero {
     width: 150px; 
@@ -561,78 +539,44 @@ footer {
     line-height: 20px;
   }
 
-  h1 {
-    font-weight: bold; 
-    font-size: 30px;
-  }
-  
-  
-  h2 {
-   font-weight: normal;
-   font-size: 25px; 
-  }
-  
-  
-  h3 {
-    font-weight:lighter;
-    font-size: 20px; 
-  }
 
   /* Présentation */
+
   
   .portrait {
-    width: 200px;
+    width: 250px;
     height: auto; 
   }
 
 
-  /* Projets */
-
-  .projets h2 {
-    font-size: 25px;
-  }
- 
-
   /* Contacts */
+
 
   label {
     font-size: 16px;
-    font-weight: lighter; 
-    color : #919FC5; 
-    margin : 10px; 
+    margin: 10px; 
   }
   
   input {
     width: 200px;
     height: 35px; 
     border-radius: 10px;
-    border: 2px solid #8FCBD3;
   }
   
   textarea {
     width: 200px;
     height: 80px;
-    border-radius: 10px;
-    border: 2px solid #8FCBD3;
   }
   
   button {
-    font-family: 'Big john pro', sans-serif;
     font-size: 16px; 
-    font-weight: bold; 
-    border-radius: 5px; 
-    background-color: #919FC5;
-    color: white; 
-    border: 1px solid #919FC5;
-    margin-top: 5%;
-    padding: 10px 20px; 
+    margin-top: 20px;
   }
   
   .line-contact {
     position: absolute; 
     top: -150px; 
   }
-
 
   /* footer */
 
@@ -642,13 +586,10 @@ footer {
     width: 100vw; 
   }
 
-  .up {
-    display: none; 
-  }
+  .up {display: none;}
 
-  .up-container p {
-    display: none; 
-  }
+  .up-container p {display: none;}
+
 }
 
 

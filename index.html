@@ -5,62 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  
+  <script defer type="text/javascript" src="app.js"></script>
   <title>Portfolio</title>
 </head>
 
-<body>
+<body class="bg-purple">
+
+  <div class="cursor" id="cursor"></div>
 
   <header class="flex between">
-
     <img class="logo-Perso" src="assets/desktop/header/Logo_desktop.svg" alt="logo-perso">
-
       <ul class="flex between">
-       <li>Accueil</li>
-       <li>Présentation</li>
-       <li>Projets</li>
-       <li>Contacts</li>
+       <a class="text-white" href="#accueil"><li>Accueil</li></a>
+       <a class="text-white" href="#presentation"><li>Présentation</li></a>
+       <a class="text-white" href="#projet"><li>Projets</li></a>
+       <a class="text-white" href="#contact"><li>Contacts</li></a>
       </ul>
-
     <img class="burger" src="assets/Mobile/Burger Menu.svg" alt="Burger-menu">
-
   </header>
 
-  <section class="flex center hero-Header">
+  <section class="flex center hero-Header" id="accueil">
     <div class="title">
       <h1>Amélie Houël</h1>
       <h2>Developpeuse Web</h2>
       <h3>UX/UI designer</h3>
     </div>
     <img class="forme-Hero" src="assets/desktop/heroheader/Heroheader-desktop.svg" alt="Forme-heroHeader">
-    <img class="line" src="/assets/desktop/heroheader/HeroLine.svg" alt="line-heroHeader">
+    <img class="line" src="/assets/desktop/heroheader/HeroLine.svg" alt="line-heroHeader">  
   </section>
 
-  <section class="presentation flex center column">
-    <div class="white-Container flex evenly"> 
+  <section class="presentation flex center column" id="presentation">
+
+    <div class="white-Container bg-white flex evenly"> 
       <img class='portrait' src="/assets/desktop/présentation/me.jpg" alt="photo portrait">
+
       <div class="text-Presentation"> 
-        <h2>Présentation</h2>
+        <h2 class="text-blue bold">Présentation</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
 
-      <div class="aside flex column center">
-        <a href="./PDF/CV-Amélie Houël-stage.pdf" target = "_blank"><p>Télécharger mon cv</p></a>
-        <a href="./PDF/CV-Amélie Houël-stage.pdf" target = "_blank"><div class="flex column">
+      <div class="aside flex column center bg-blue">
+        <a class="text-white" href="./PDF/CV-Amélie Houël-stage.pdf" target = "_blank"><p>Télécharger mon cv</p></a>
+        <a class="text-white" href="./PDF/CV-Amélie Houël-stage.pdf" target = "_blank"><div class="flex column">
           <img src="assets/desktop/présentation/line-présentation.svg" alt="deco">
           <img class="triangle" src="assets/desktop/présentation/triangle_présentation.svg" alt="triangle_déco">
         </div></a>
       </div>
       
     </div>
-
-    
-    
   </section>
 
-  <section class="projets">
-    <h2>Projets</h2>
+  <section class="projets bg-white" id="projet">
+    <h2 class="text-blue bold">Projets</h2>
     <div class="pictures flex evenly">
       <img class="individual-pic" src="assets/desktop/projets/photo 1.jpg" alt="">
       <img class="individual-pic" src="assets/desktop/projets/photo 2.jpg" alt="">
@@ -75,26 +72,26 @@
     </div>
   </section>
   
-  <section class=" contacts flex column center">
+  <section class=" contacts flex column center" id="contact">
     <img class="line-contact" src="assets/desktop/contacts/Line-contact.svg" alt="line-deco">
     <img class="forme-contact" src="assets/desktop/contacts/forme-contact.svg" alt="forme-contacts">
 
     <div class="form">
-      <h2>Me contacter :</h2>
+      <h2 class="text-blue bold"> Me contacter </h2>
       <form class="" action="" method="post">
         <div class="flex column">
-            <label for="name">Votre identité :</label>
+            <label class="text-purple" for="name"> Votre identité : </label>
             <input type="text" id="name" name="user_name">
         </div>
         <div class="flex column">
-            <label for="mail">Votre e-mail :</label>
+            <label class="text-purple" for="mail"> Votre e-mail : </label>
             <input type="email" id="mail" name="user_mail">
         </div>
         <div class="flex column">
-            <label for="msg">Votre Message :</label>
+            <label class="text-purple" for="msg"> Votre Message : </label>
             <textarea id="msg" name="user_message" placeholder="Avez-vous une question ? Un retour à me faire part ?"></textarea>
         </div>
-        <button class="style" type="button">Envoyer</button>
+        <button class="bg-purple" type="button"> Envoyer </button>
       </form>
     </div>
     
@@ -102,18 +99,17 @@
   </section>
 
   <footer class="footer flex between"> 
-    <div class="flex up-container">
-      <img class="up" src="assets/desktop/contacts/Up.svg" alt="Retour-Accueil">
+    <div class="flex up-container text-white">
+      <img class="up"  src="assets/desktop/contacts/Up.svg" alt="Retour-Accueil">
       <p>Retour</p>
     </div>
-    <div class="social flex around"> 
-      <img class="icon-Social" src="assets/desktop/contacts/Github.svg" alt="icon-github">
-      <img class="icon-Social" src="assets/desktop/contacts/dribbble.svg" alt="icon-dribbble">
-      <img class="icon-Social" src="assets/desktop/contacts/Linkedin.svg" alt="icon-linkedin">
-      <img class="icon-Social" src="assets/desktop/contacts/Behance.svg" alt="icon-behance">
+    <div class="social flex"> 
+      <a href="https://github.com/AmelieHouel" target="_blank" class="icon-Social"><img  src="assets/desktop/contacts/Github.svg" alt="icon-github"></a>
+      <a href="https://dribbble.com/AmelieHouel" target="_blank" class="icon-Social"><img src="assets/desktop/contacts/dribbble.svg" alt="icon-dribbble"></a>
+      <a href="https://www.linkedin.com/in/am%C3%A9liehou%C3%ABl/" target="_blank" class="icon-Social"><img src="assets/desktop/contacts/Linkedin.svg" alt="icon-linkedin"></a>
+      <a href="https://www.behance.net/amelie_houel" target="_blank" class="icon-Social"><img src="assets/desktop/contacts/Behance.svg" alt="icon-behance"></a>
     </div>
   </footer>
 
-  <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
