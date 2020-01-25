@@ -62,17 +62,20 @@
 
 /*body*/
 
-* {cursor: none;}
+* { 
+  cursor: none;
+  box-sizing: border-box;
+}
+
 
 .cursor {
+  content: url('./assets/cursor.svg');
   pointer-events: none; 
   position: absolute; 
   width: 40px;
   height: 40px; 
   mix-blend-mode: difference;
-  background: #8FCBD3; 
   z-index: 5; 
-  border-radius: 50px;
   transition: transform 0.1s;
 }
 
@@ -85,9 +88,12 @@
 body {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
   font-family: "Big john pro", sans-serif;
-  color: white; 
+  color: white;
+  /*background-image: url('/assets/desktop/heroheader/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;*/
 }
 
 a {
@@ -127,6 +133,7 @@ li {
 .hero-Header {
   height: 85vh; 
   position: relative;
+  
 }
 
 .title {line-height: 30px;}
@@ -215,11 +222,41 @@ h3 {
 .projets h2 {
   padding-top: 50px;
   font-size: 30px;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition : opacity 0.3s, transform 0.3s;
+}
+
+.projets h2.is-active {
+  opacity: 1; 
+  transform: none;
 }
 
 .pictures {padding: 30px;}
 
-.individual-pic {padding: 20px;}
+.individual-pic {
+  margin: 20px;
+  width: 400px;
+  filter: grayscale(1) blur(0.5px);
+  transition: filter 1s;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition : opacity 0.3s, transform 0.3s, filter 0.3s;
+  box-shadow: 5px 5px 10px 0px #cfcfcf;
+}
+
+
+.individual-pic.is-active {
+  opacity: 1; 
+  transform: none;
+}
+
+
+
+.individual-pic:hover {
+  filter: grayscale(0) blur(0px);
+}
 
 
 /*contacts*/
@@ -231,6 +268,8 @@ h3 {
 }
 
 .forme-contact {
+  width: 650px; 
+  height: auto; 
   position: absolute; 
   margin-left: 20px;
   z-index: 1;

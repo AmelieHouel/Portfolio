@@ -1,8 +1,11 @@
+//Mouse 
+
 var button = document.querySelector('button');
 var cursor = document.getElementById('cursor');
 var position; 
 var lastPosition = 0;
 var links = document.querySelectorAll("a");
+
 
 button.addEventListener('click', function(){
   var name = document.getElementById('name').value;
@@ -10,7 +13,6 @@ button.addEventListener('click', function(){
   var msg = document.getElementById('msg').value;
   console.log('bonjour '+name+ ' ,votre mail : '+mail+', votre message : '+ msg);
 });
-
 
 window.addEventListener("scroll", scrollUpdate);
 
@@ -38,3 +40,33 @@ for (let i = 0; i < links.length; i++) {
     cursor.classList.remove("hover");
   });
 }
+
+// animation in scroll
+
+var ids =['titleProjet', 'projet1','projet2', 'projet3', 'projet4', 'projet5', 'projet6'];
+
+ids.forEach(function(id) {
+  var element = document.getElementById(id);
+
+  var waypoint = new Waypoint({
+    element: element,
+    handler: function(direction) {
+      element.classList.add('is-active');
+    },
+    offset:'95%'
+  });
+})
+
+//var nav = document.getElementById('nav');
+//console.log(nav);
+//var burger = document.getElementById('burger');
+
+//function onWindowScroll(e) {
+	//if (window.pageYOffset > 300) {
+   // burger.style.display='flex'; 
+   // console.log('header');
+ // } else if(window.pageYOffset < 300)
+   // burger.style.display='none';
+//}
+
+//window.addEventListener('scroll', onWindowScroll)

@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <script defer type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="js/wayponts.js"></script>
+  <script defer type="text/javascript" src="./js/app.js"></script>
   <title>Portfolio</title>
 </head>
 
@@ -15,13 +16,13 @@
 
   <header class="flex between">
     <img class="logo-Perso" src="assets/desktop/header/Logo_desktop.svg" alt="logo-perso">
-      <ul class="flex between">
+      <ul class="flex between nav">
        <a class="text-white" href="#accueil"><li>Accueil</li></a>
        <a class="text-white" href="#presentation"><li>Présentation</li></a>
        <a class="text-white" href="#projet"><li>Projets</li></a>
        <a class="text-white" href="#contact"><li>Contacts</li></a>
       </ul>
-    <img class="burger" src="assets/Mobile/Burger Menu.svg" alt="Burger-menu">
+    <img class="burger" id="burger" src="assets/Mobile/Burger Menu.svg" alt="Burger-menu">
   </header>
 
   <section class="flex center hero-Header" id="accueil">
@@ -57,18 +58,18 @@
   </section>
 
   <section class="projets bg-white" id="projet">
-    <h2 class="text-blue bold">Projets</h2>
+    <h2 id="titleProjet" class="text-blue bold">Projets</h2>
     <div class="pictures flex evenly">
-      <img class="individual-pic" src="assets/desktop/projets/photo 1.jpg" alt="">
-      <img class="individual-pic" src="assets/desktop/projets/photo 2.jpg" alt="">
+      <img class="individual-pic" id="projet1" src="assets/desktop/projets/photo1.jpg" alt="">
+      <img class="individual-pic" id="projet2" src="assets/desktop/projets/photo2.jpg" alt="">
     </div>
     <div class="pictures flex evenly">
-      <img class="individual-pic" src="assets/desktop/projets/photo 3.jpg" alt="">
-      <img class="individual-pic" src="assets/desktop/projets/photo 4.jpg" alt="">
+      <img class="individual-pic" id="projet3" src="assets/desktop/projets/photo3.jpg" alt="">
+      <img class="individual-pic" id="projet4" src="assets/desktop/projets/photo4.jpg" alt="">
     </div>
     <div class="pictures flex evenly">
-      <img class="individual-pic" src="assets/desktop/projets/photo 5.jpg" alt="">
-      <img class="individual-pic" src="assets/desktop/projets/photo 6.jpg" alt="">
+      <img class="individual-pic" id="projet5" src="assets/desktop/projets/photo5.jpg" alt="">
+      <img class="individual-pic" id="projet6" src="assets/desktop/projets/photo6.jpg" alt="">
     </div>
   </section>
   
