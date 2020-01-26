@@ -75,7 +75,7 @@
   width: 40px;
   height: 40px; 
   mix-blend-mode: difference;
-  z-index: 5; 
+  z-index: 10; 
   transition: transform 0.1s;
 }
 
@@ -90,10 +90,6 @@ body {
   padding: 0px;
   font-family: "Big john pro", sans-serif;
   color: white;
-  /*background-image: url('/assets/desktop/heroheader/background.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;*/
 }
 
 a {
@@ -101,9 +97,7 @@ a {
   transition: transform 0.3s;
 }
 
-a:hover {
-  transform: scale(1.1);
-}
+a:hover {transform: scale(1.1);}
 
 
 /*header*/
@@ -111,17 +105,29 @@ a:hover {
 
 header {
   width: 100vw;
-  height: auto;
+  height: 10vh;
+  position: fixed;
+  z-index: 9;
 }
 
 .logo-Perso {padding: 20px;}
 
-ul {margin-right: 115px;}
+ul {
+  margin-right: 115px;
+  position: relative;
+}
 
 li {
   list-style-type: none;
   padding: 20px;
   font-size: 20px;
+}
+
+.forme-scroll {
+  position: absolute;
+  left: 10%;
+  z-index: 10;
+  opacity: 0.6;
 }
 
 .burger {display: none;}
@@ -131,8 +137,12 @@ li {
 
 
 .hero-Header {
-  height: 85vh; 
+  height: 100vh; 
   position: relative;
+  /*background-image: url('/assets/desktop/heroheader/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;*/
   
 }
 
@@ -319,12 +329,7 @@ button {
 /*footer*/
 
 
-footer {
-  height: 10vh; 
-  align-items: center;
-}
-
-.up {margin-left: 2%;}
+footer {height: 5vh;}
 
 .social {margin-right: 2%;}
 
@@ -333,21 +338,7 @@ footer {
   transition: transform 0.3s;
 }
 
-.icon-Social:hover {
-  transform: scale(1.1);
-}
-
-.up-container {
-  align-items: center;
-  margin-left: 2%;
-}
-
-.up-container p {
-  font-size: 20px; 
-  font-weight: lighter; 
-  margin-left: 10%; 
-}
-
+.icon-Social:hover {transform: scale(1.1);}
 
 /* media queries */
 
@@ -355,13 +346,15 @@ footer {
 @media screen and (max-width: 850px) {
 
 
-  ul, li {
-    display: none; 
-  }
+  ul, li {display: none;}
 
   .burger {
     display: block; 
     margin-right : 5%; 
+  }
+
+  .forme-scroll{
+    visibility: hidden; 
   }
 
 }
@@ -402,10 +395,8 @@ footer {
   }
 
   .portrait {
-    padding: 30px; 
-    width: 310px;
-    height: auto;
-    border-radius: 50px;
+    width: 309px;
+    border-radius: 30px;
   }
 
   .text-Presentation{

@@ -7,12 +7,7 @@ var lastPosition = 0;
 var links = document.querySelectorAll("a");
 
 
-button.addEventListener('click', function(){
-  var name = document.getElementById('name').value;
-  var mail = document.getElementById('mail').value;
-  var msg = document.getElementById('msg').value;
-  console.log('bonjour '+name+ ' ,votre mail : '+mail+', votre message : '+ msg);
-});
+
 
 window.addEventListener("scroll", scrollUpdate);
 
@@ -41,6 +36,17 @@ for (let i = 0; i < links.length; i++) {
   });
 }
 
+
+// formulaire
+
+button.addEventListener('click', function(){
+  var name = document.getElementById('name').value;
+  var mail = document.getElementById('mail').value;
+  var msg = document.getElementById('msg').value;
+  console.log('bonjour '+name+ ' ,votre mail : '+mail+', votre message : '+ msg);
+});
+
+
 // animation in scroll
 
 var ids =['titleProjet', 'projet1','projet2', 'projet3', 'projet4', 'projet5', 'projet6'];
@@ -57,16 +63,23 @@ ids.forEach(function(id) {
   });
 })
 
-//var nav = document.getElementById('nav');
-//console.log(nav);
-//var burger = document.getElementById('burger');
 
-//function onWindowScroll(e) {
-	//if (window.pageYOffset > 300) {
-   // burger.style.display='flex'; 
-   // console.log('header');
- // } else if(window.pageYOffset < 300)
-   // burger.style.display='none';
-//}
 
-//window.addEventListener('scroll', onWindowScroll)
+// animation forme header au scroll 
+
+function onWindowsScroll(){
+  var indice = document.getElementById('formeScroll');
+  var scrolls = [0, 630, 1500, 3200];
+  var formePositions = ['10%', '30%', '60%', '80%'];
+  var lastPositionScroll = window.scrollY;
+  console.log(lastPosition + "px");
+
+  for(i=0;i<scrolls.length;i++) {
+    if(lastPositionScroll > scrolls[i]-1){
+      indice.style.left= formePositions[i];
+    } else {
+    }
+  }
+};
+
+window.addEventListener('scroll', onWindowsScroll);
