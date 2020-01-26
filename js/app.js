@@ -7,8 +7,6 @@ var lastPosition = 0;
 var links = document.querySelectorAll("a");
 
 
-
-
 window.addEventListener("scroll", scrollUpdate);
 
 function scrollUpdate(e) {
@@ -65,9 +63,10 @@ ids.forEach(function(id) {
 
 
 
-// animation forme header au scroll 
+// animation purple-form header au scroll 
 
-function onWindowsScroll(){
+
+window.addEventListener('scroll', function onWindowsScroll() {
   var indice = document.getElementById('formeScroll');
   var scrolls = [0, 630, 1500, 3200];
   var formePositions = ['10%', '30%', '60%', '80%'];
@@ -80,6 +79,24 @@ function onWindowsScroll(){
     } else {
     }
   }
-};
+});
 
-window.addEventListener('scroll', onWindowsScroll);
+
+
+// animation title onload
+
+var title = document.getElementById('title');
+
+window.addEventListener("DOMContentLoaded", function() {
+    title.style.opacity="1";
+    setTimeout(waitingH1, 3000);
+});
+
+
+function waitingH1 (){
+  var h2 = document.getElementById('h2');
+  var h3 = document.getElementById('h3');
+  h2.style.opacity="1";
+  h3.style.opacity='1';
+}
+
