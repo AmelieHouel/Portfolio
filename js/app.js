@@ -106,8 +106,12 @@ var open = document.getElementById('burger');
 var header = document.getElementById('header');
 var list = document.getElementById('list');
 var lis = document.querySelectorAll('#nav-choice');
+var burgerMenu = document.getElementById('burger');
 
 
+burgerMenu.addEventListener('click', function(){
+  burgerMenu.classList.toggle('active');
+});
 
 open.addEventListener('click', function() {
   header.classList.toggle('is-open');
