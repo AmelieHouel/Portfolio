@@ -100,3 +100,23 @@ function waitingH1 (){
   h3.style.opacity='1';
 }
 
+// Burger menu
+
+var open = document.getElementById('burger');
+var header = document.getElementById('header');
+var list = document.getElementById('list');
+var lis = document.querySelectorAll('#nav-choice');
+
+
+
+open.addEventListener('click', function() {
+  header.classList.toggle('is-open');
+  list.classList.toggle('is-opened');
+});
+
+for(i=0;i<lis.length;i++){
+  lis[i].addEventListener('click', function() {
+    header.classList.remove('is-open');
+    list.classList.remove('is-opened');
+  })
+}
