@@ -45,9 +45,10 @@ button.addEventListener('click', function(){
 });
 
 
+
 // animation in scroll
 
-var ids =['titleProjet', 'projet1','projet2', 'projet3', 'projet4', 'projet5', 'projet6'];
+var ids =['project-title', 'project1', 'project2', 'project3', 'project4', 'project5', 'project6'];
 
 ids.forEach(function(id) {
   var element = document.getElementById(id);
@@ -67,7 +68,7 @@ ids.forEach(function(id) {
 
 
 window.addEventListener('scroll', function onWindowsScroll() {
-  var indice = document.getElementById('formeScroll');
+  var indice = document.getElementById('navShape');
   var scrolls = [0, 630, 1500, 3200];
   var formePositions = ['10%', '30%', '60%', '80%'];
   var lastPositionScroll = window.scrollY;
@@ -85,7 +86,7 @@ window.addEventListener('scroll', function onWindowsScroll() {
 
 // animation title onload
 
-var title = document.getElementById('title');
+var title = document.getElementById('heroH1');
 
 window.addEventListener("DOMContentLoaded", function() {
     title.style.opacity="1";
@@ -93,9 +94,9 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
-function waitingH1 (){
-  var h2 = document.getElementById('h2');
-  var h3 = document.getElementById('h3');
+function waitingH1 () {
+  var h2 = document.getElementById('heroH2');
+  var h3 = document.getElementById('heroH3');
   h2.style.opacity="1";
   h3.style.opacity='1';
 }
@@ -105,7 +106,7 @@ function waitingH1 (){
 var open = document.getElementById('burger');
 var header = document.getElementById('header');
 var list = document.getElementById('list');
-var lis = document.querySelectorAll('#nav-choice');
+var lis = document.querySelectorAll('#navChoice');
 var burgerMenu = document.getElementById('burger');
 
 

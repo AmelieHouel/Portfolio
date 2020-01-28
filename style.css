@@ -83,6 +83,7 @@
 .bold {font-weight: bold;}
 .light {font-weight: lighter;}
 
+
 /*body*/
 
 * { 
@@ -92,13 +93,13 @@
 
 
 .cursor {
-  content: url('./assets/cursor.svg');
+  content: url('assets/cursor.svg');
   pointer-events: none; 
   position: absolute; 
   width: 40px;
   height: 40px; 
   mix-blend-mode: difference;
-  z-index: 10; 
+  z-index: 11; 
   transition: transform 0.1s;
 }
 
@@ -125,7 +126,6 @@ a:hover {transform: scale(1.1);}
 
 /*header*/
 
-
 header {
   width: 100vw;
   height: 10vh;
@@ -136,7 +136,7 @@ header {
   background-color: #919FC5;
 }
 
-.logo-perso {padding: 10px;}
+.personal-logo {padding: 10px;}
 
 
 ul {
@@ -152,7 +152,7 @@ ul {
   font-size: 20px;
 }
 
-.forme-scroll {
+.nav-shape {
   position: absolute;
   left: 10%;
   z-index: 10;
@@ -161,37 +161,28 @@ ul {
 }
 
 .burger {display: none;}
-
-.menu {
-  display: none; 
-}
-
+.menu {display: none;}
 
 /* heroHeader */
 
 
-.hero-Header {
+.hero-header {
   height: 100vh; 
   position: relative;
- /*background-image: url('/assets/desktop/heroheader/background1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;*/
-
 }
 
-.titles {
+.hero-titles {
   line-height: 40px;
   margin-right: 10px; 
 }
 
-.titles h1 {
+.hero-titles h1 {
   opacity: 0; 
   font-size: 40px;
   animation: entry 3s;
 }
 
-.titles h2 {
+.hero-titles h2 {
  opacity: 0;
  font-weight: normal;
  animation: opacity 1s; 
@@ -199,7 +190,7 @@ ul {
  text-align: center;
 }
 
-.titles h3 {
+.hero-titles h3 {
   opacity: 0;
   font-weight: lighter;
   font-size: 26px;
@@ -208,12 +199,12 @@ ul {
   text-align: center;
 }
 
-.forme-Hero {
+.hero-shape {
   padding-left: 20px;
   margin-left: 20px;
 }
 
-.line {
+.hero-line {
   position: absolute; 
   bottom: -70px; 
 }
@@ -228,7 +219,7 @@ ul {
   border-radius: 20px;
 }
 
-.white-Container {
+.presentation-container {
   width: 80vw;
   height: 85vh;
   border-radius: 30px;
@@ -237,14 +228,14 @@ ul {
   position: relative;
 }
 
-.text-Presentation {
+.presentation-text {
   width: 40%;
   height: auto;
   color: black; 
 }
 
 
-.text-Presentation p {
+.presentation-text p {
   font-size: 20px;
   text-align: justify;
 }
@@ -268,15 +259,15 @@ ul {
 }
 
 
-/*Projets*/ 
+/* Projects */ 
 
 
-.projets {
+.projects {
   margin-top: 400px;
   text-align: center;
 }
 
-.projets h2 {
+.projects h2 {
   padding-top: 50px;
   font-size: 30px;
   opacity: 0;
@@ -284,7 +275,7 @@ ul {
   transition : opacity 0.3s, transform 0.3s;
 }
 
-.projets h2.is-active {
+.projects h2.is-active {
   opacity: 1; 
   transform: none;
 }
@@ -317,13 +308,13 @@ ul {
 
 /*contacts*/
 
-.contacts {
+.contact {
   height: 90vh; 
   position: relative; 
   overflow: hidden;
 }
 
-.forme-contact {
+.contact-shape {
   width: 650px; 
   height: auto; 
   position: absolute; 
@@ -331,7 +322,7 @@ ul {
   z-index: 1;
 }
 
-.form {z-index: 2;}
+.form-container {z-index: 2;}
 
 
 label {
@@ -345,6 +336,7 @@ input {
   height: 42px; 
   border-radius: 10px;
   border: 2px solid #8FCBD3;
+  outline: none;
 }
 
 textarea {
@@ -352,6 +344,7 @@ textarea {
   height: 106px;
   border-radius: 10px;
   border: 2px solid #8FCBD3;
+  outline: none;
 }
 
 button {
@@ -365,7 +358,7 @@ button {
   padding: 10px 30px; 
 }
 
-.line-contact {
+.contact-line {
   position: absolute; 
   top: -2px; 
 }
@@ -375,17 +368,14 @@ button {
 
 
 footer {height: 5vh;}
+.network {margin-right: 2%;}
 
-.social {margin-right: 2%;}
-
-.icon-Social {
+.social {
   padding: 10px;
   transition: transform 0.3s;
 }
 
-.icon-Social:hover {transform: scale(1.1);}
-
-
+.social:hover {transform: scale(1.1);}
 
 
 /* media queries */
@@ -415,9 +405,6 @@ footer {height: 5vh;}
     font-size: 40px;
   }
 
-  .logo-perso {
-    padding: 10px;
-  }
   
   ul {display: none;}
 
@@ -428,7 +415,7 @@ footer {height: 5vh;}
     justify-content: center;
     align-items: center;
     position: fixed; 
-    z-index: 12;
+    z-index: 10;
     right: 10px;
     width: 50px;
     height: 50px; 
@@ -475,8 +462,7 @@ footer {height: 5vh;}
   transform: rotate(135deg);
 }
 
-
-.forme-scroll {visibility: hidden;}
+.nav-shape {visibility: hidden;}
 
 }
 
@@ -490,24 +476,24 @@ footer {height: 5vh;}
   /* HeroHeader */
   
 
-  .forme-Hero {
+  .hero-shape {
     width: 219px; 
     height: auto; 
     padding-top: 5%;
   }
 
-  .hero-Header {
+  .hero-header {
     flex-direction: column;
     height: 100vh; 
   }
 
-  .line{bottom: -50px;}
+  .hero-line {bottom: -50px;}
 
 
   /* présentation */ 
 
 
-  .white-Container { 
+  .presentation-container { 
     flex-direction: column; 
     width: 100vw;
     height: auto; 
@@ -520,7 +506,7 @@ footer {height: 5vh;}
     border-radius: 30px;
   }
 
-  .text-Presentation{
+  .presentation-text {
     width: 80%;
     height: 80%;
   }
@@ -534,7 +520,7 @@ footer {height: 5vh;}
   }
 
 
-  /*Projets*/
+  /* Projects */
 
 
   .individual-pic{
@@ -542,15 +528,15 @@ footer {height: 5vh;}
     height: auto;
   }
 
-  .projets {margin-top: 150px;}
+  .projects {margin-top: 150px;}
 
 
   /*contact*/
 
 
-  .forme-contact {display: none;}
+  .contact-shape {display: none;}
 
-  .form {
+  .form-container {
     background-color: white;
     padding: 6%;
     border-radius: 20px;
@@ -558,7 +544,6 @@ footer {height: 5vh;}
 
 
   /*footer*/
-
 
   .up {
     width: 40px; 
@@ -570,15 +555,14 @@ footer {height: 5vh;}
 
 @media screen and (max-width: 450px) {
 
-
   /* Hero Header */ 
 
 
-  .titles h1 {font-size: 35px;}
+  .hero-titles h1 {font-size: 35px;}
 
-  .titles h2, h2 {font-size: 30px;}
+  .hero-titles h2, h2 {font-size: 30px;}
   
-  .titles h3, h3 {font-size: 26px;}
+  .hero-titles h3, h3 {font-size: 26px;}
 
 
   /* Présentation */ 
@@ -593,7 +577,7 @@ footer {height: 5vh;}
   /* Contact */ 
 
 
-  .line-contact {top: -50px;}
+  .contact-line {top: -50px;}
 
 }
 
@@ -605,11 +589,11 @@ footer {height: 5vh;}
 
   /* présentation */
 
-  .white-Container {padding-bottom: 80px;}
+  .presentation-container {padding-bottom: 80px;}
 
   .portrait {width: 325px;}
 
-  .text-Presentation p {margin: 10px 130px;}
+  .presentation-text p {margin: 10px 130px;}
 
   .aside {
     padding: 10px 80px;
@@ -617,10 +601,10 @@ footer {height: 5vh;}
     text-align: center;
   }
 
-  /* projets*/
+  /* projects */
 
 
-  .projets {margin-top: 300px;}
+  .projects {margin-top: 300px;}
 
 }
 
@@ -634,7 +618,7 @@ footer {height: 5vh;}
   /* Hero Header */
 
 
-  .line {
+  .hero-line {
     position: absolute; 
     bottom: -90px; 
   }
@@ -643,7 +627,7 @@ footer {height: 5vh;}
   /* présentation */
 
 
-  .white-Container {
+  .presentation-container {
     height: 65vh;
     margin-top: 90px; 
   }
@@ -655,11 +639,11 @@ footer {height: 5vh;}
 @media screen and (max-width: 320px) and (min-height: 568px) {
 
 
-  .titles h1 {font-size: 30px;}
+  .hero-titles h1 {font-size: 30px;}
   
-  .titles h2, h2 {font-size: 25px;}
+  .hero-titles h2, h2 {font-size: 25px;}
   
-  .titles h3, h3 {font-size: 20px;}
+  .hero-titles h3, h3 {font-size: 20px;}
 
 
   /* Header */ 
@@ -671,7 +655,7 @@ footer {height: 5vh;}
     padding: 5px; 
   }
   
-  .logo-perso {
+  .personal-logo {
     padding: 5px;
     width: 70px;
     height: auto;
@@ -681,7 +665,7 @@ footer {height: 5vh;}
   /* Hero Header */
 
 
-  .forme-Hero {
+  .hero-shape {
     width: 150px; 
     height: auto;
   }
@@ -700,7 +684,7 @@ footer {height: 5vh;}
     height: auto; 
   }
 
-  .text-Presentation p { font-size: 16px;}
+  .presentation-text p { font-size: 16px;}
 
 
   /* Contacts */
@@ -727,7 +711,7 @@ footer {height: 5vh;}
     margin-top: 20px;
   }
   
-  .line-contact {
+  .contact-line {
     position: absolute; 
     top: -150px; 
   }
@@ -735,7 +719,7 @@ footer {height: 5vh;}
 
   /* footer */
 
-  .social {
+  .network {
     justify-content: center;
     align-items: center;
     width: 100vw; 
