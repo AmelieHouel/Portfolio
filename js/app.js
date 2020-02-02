@@ -5,6 +5,8 @@ var cursor = document.getElementById('cursor');
 var position; 
 var lastPosition = 0;
 var links = document.querySelectorAll("a");
+var form = document.getElementById('form');
+var body = document.querySelector('body');
 
 
 window.addEventListener("scroll", scrollUpdate);
@@ -34,15 +36,19 @@ for (let i = 0; i < links.length; i++) {
   });
 }
 
+//form.addEventListener("mouseover", function() {
+  //body.style.cursor="pointer";
+//});
+
 
 // formulaire
 
-button.addEventListener('click', function(){
-  var name = document.getElementById('name').value;
-  var mail = document.getElementById('mail').value;
-  var msg = document.getElementById('msg').value;
-  console.log('bonjour '+name+ ' ,votre mail : '+mail+', votre message : '+ msg);
-});
+//button.addEventListener('click', function(){
+ // var name = document.getElementById('name').value;
+  //var mail = document.getElementById('mail').value;
+  //var msg = document.getElementById('msg').value;
+  //console.log('bonjour '+name+ ' ,votre mail : '+mail+', votre message : '+ msg);
+//});
 
 
 
