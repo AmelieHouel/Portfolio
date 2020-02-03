@@ -1,3 +1,4 @@
+
 <?php
   $name = htmlspecialchars($_POST['username']);
   $mail = htmlspecialchars($_POST['mail']);

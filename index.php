@@ -105,7 +105,6 @@
         </div>
         <button class="text-white bold bg-purple" type="submit">Envoyer</button>
       </form>
-
     </div>
 
 

@@ -9,6 +9,7 @@ var form = document.getElementById('form');
 var body = document.querySelector('body');
 
 
+
 window.addEventListener("scroll", scrollUpdate);
 
 function scrollUpdate(e) {
@@ -36,9 +37,17 @@ for (let i = 0; i < links.length; i++) {
   });
 }
 
-//form.addEventListener("mouseover", function() {
-  //body.style.cursor="pointer";
-//});
+/*Pointer form */
+
+form.addEventListener("mouseover", function() {
+  body.style.cursor="pointer";
+  cursor.classList.remove('cursor');
+});
+
+form.addEventListener('mouseout', function(){
+  body.style.cursor="none";
+  cursor.classList.add('cursor');
+});
 
 
 // formulaire
@@ -68,8 +77,6 @@ ids.forEach(function(id) {
   });
 })
 
-
-
 // animation purple-form header au scroll 
 
 
@@ -89,7 +96,6 @@ window.addEventListener('scroll', function onWindowsScroll() {
 });
 
 
-
 // animation title onload
 
 var title = document.getElementById('heroH1');
@@ -99,13 +105,13 @@ window.addEventListener("DOMContentLoaded", function() {
     setTimeout(waitingH1, 3000);
 });
 
-
 function waitingH1 () {
   var h2 = document.getElementById('heroH2');
   var h3 = document.getElementById('heroH3');
   h2.style.opacity="1";
   h3.style.opacity='1';
 }
+
 
 // Burger menu
 

@@ -23,23 +23,16 @@
 /* Animations */ 
 
 @keyframes cursorChanged {
-  0% {
-    transform: scale(1.3);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.3);
-  }
+  0% {transform: scale(1.2);}
+  50% {transform: scale(1);}
+  100% {transform: scale(1.2);}
 }
 
 @keyframes entry {
-  0% { 
-    opacity: 0;
+  0% {
+    opacity: 0; 
     transform: translateY(-300px) scale(1.5);
   }
-
   100% {
     opacity: 1; 
     transform: none;
@@ -47,14 +40,8 @@
 }
 
 @keyframes opacity {
-
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1; 
-  }
+  0% {opacity: 0;}
+  100% {opacity: 1; }
 }
 
 
@@ -86,9 +73,10 @@
 
 .w100 {width:100vw;}
 .ta-c {text-align: center;}
+
 /*body*/
 
-* {box-sizing: border-box; cursor: none;}
+* {box-sizing: border-box;}
 
 
 .cursor {
@@ -102,7 +90,6 @@
   transition: transform 0.1s;
 }
 
-
 .cursor.hover {
   animation-duration: 0.8s;
   animation-name: cursorChanged;
@@ -114,11 +101,13 @@ body {
   padding: 0px;
   font-family: "Big john pro", sans-serif;
   color: white;
+  cursor: none;
 }
 
 a {
   text-decoration: none;
   transition: transform 0.3s;
+  cursor: none;
 }
 
 a:hover {transform: scale(1.1);}
@@ -158,9 +147,7 @@ ul {
 .burger {display: none;}
 .menu {display: none;}
 
-
 /* heroHeader */
-
 .hero-header {
   height: 100vh; 
   position: relative;
@@ -201,14 +188,12 @@ ul {
   bottom: -70px; 
 }
 
-
 /*présentation*/
-
-
 .portrait {
   width: 325px;
   height: auto;
   border-radius: 20px;
+  object-fit: scale-down;
 }
 
 .presentation-container {
@@ -225,7 +210,6 @@ ul {
   height: auto;
   color: black; 
 }
-
 
 .presentation-text p {
   font-size: 20px;
@@ -250,10 +234,7 @@ ul {
   animation-direction: alternate;
 }
 
-
 /* Projects */ 
-
-
 .projects {margin-top: 400px;}
 
 .projects h2 {
@@ -271,7 +252,6 @@ ul {
 
 .pictures {padding: 30px;}
 
-
 .individual-pic {
   margin: 20px;
   width: 400px;
@@ -284,19 +264,14 @@ ul {
   box-shadow: 5px 5px 10px 0px #cfcfcf;
 }
 
-
 .individual-pic.is-active {
   opacity: 1; 
   transform: none;
 }
 
-
-
 .individual-pic:hover {filter: grayscale(0) blur(0px);}
 
-
 /*contacts*/
-
 .contact {
   height: 90vh; 
   position: relative; 
@@ -350,8 +325,6 @@ button {
 }
 
 /*footer*/
-
-
 footer {height: 5vh;}
 
 .social {
@@ -364,11 +337,9 @@ footer {height: 5vh;}
 
 /* media queries */
 
-
 @media screen and (max-width: 850px) {
 
   /* Menu burger */ 
-
  .header {
    transition: all 0.4s;
  }
@@ -389,11 +360,9 @@ footer {height: 5vh;}
     font-size: 40px;
   }
 
-  
   ul {display: none;}
 
   /* Menu Burger */ 
-
   .burger {
     display: flex;
     justify-content: center;
@@ -470,8 +439,6 @@ footer {height: 5vh;}
 
 
   /* présentation */ 
-
-
   .presentation-container { 
     flex-direction: column;
     height: auto; 
@@ -496,10 +463,7 @@ footer {height: 5vh;}
     padding: 10px 100px;
   }
 
-
   /* Projects */
-
-
   .individual-pic{
     width: 200px; 
     height: auto;
@@ -507,10 +471,7 @@ footer {height: 5vh;}
 
   .projects {margin-top: 150px;}
 
-
   /*contact*/
-
-
   .contact-shape {display: none;}
 
   .form-container {
@@ -519,57 +480,40 @@ footer {height: 5vh;}
     border-radius: 20px;
   }
 
-
   /*footer*/
-
   .up {
     width: 40px; 
     height: 40px; 
   }
-
 }
 
 
 @media screen and (max-width: 450px) {
 
   /* Hero Header */ 
-
-
   .hero-titles h1 {font-size: 35px;}
-
   .hero-titles h2, h2 {font-size: 30px;}
-  
   .hero-titles h3, h3 {font-size: 26px;}
 
-
   /* Présentation */ 
-
-
   .aside {
     font-size: 18px; 
     padding: 10px 60px; 
   }
-
+  .portrait {width: 209px;}
 
   /* Contact */ 
-
-
   .contact-line {top: -50px;}
 
 }
 
 
 /* Ipad */
-
 @media screen and (width: 768px) and (height: 1024px) {
 
-
   /* présentation */
-
   .presentation-container {padding-bottom: 80px;}
-
   .portrait {width: 325px;}
-
   .presentation-text p {margin: 10px 130px;}
 
   .aside {
@@ -578,53 +522,34 @@ footer {height: 5vh;}
   }
 
   /* projects */
-
-
   .projects {margin-top: 300px;}
-
 }
 
 
 /* Ipad pro */ 
-
-
 @media screen and (width: 1024px) and (height: 1366px) {
 
-
   /* Hero Header */
-
-
   .hero-line {
     position: absolute; 
     bottom: -90px; 
   }
 
-
   /* présentation */
-
-
   .presentation-container {
     height: 65vh;
     margin-top: 90px; 
   }
-
 }
 
-
-
+/*Iphone 5*/
 @media screen and (max-width: 320px) and (min-height: 568px) {
 
-
   .hero-titles h1 {font-size: 30px;}
-  
   .hero-titles h2, h2 {font-size: 25px;}
-  
   .hero-titles h3, h3 {font-size: 20px;}
 
-
   /* Header */ 
-
-
   header {
     height: auto;
     padding: 5px; 
@@ -636,29 +561,21 @@ footer {height: 5vh;}
     height: auto;
   }
 
-  
   /* Hero Header */
-
-
   .hero-shape {
     width: 150px; 
     height: auto;
   }
 
   /* Présentation */
-
-  
   .portrait {
     width: 250px;
     height: auto; 
   }
 
-  .presentation-text p { font-size: 16px;}
-
+  .presentation-text p {font-size: 16px;}
 
   /* Contacts */
-
-
   label {
     font-size: 16px;
     margin: 10px; 
@@ -684,13 +601,6 @@ footer {height: 5vh;}
     position: absolute; 
     top: -150px; 
   }
-
-
-  /* footer */
-
-  .up {display: none;}
-
-  .up-container p {display: none;}
 }
 
 
