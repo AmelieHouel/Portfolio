@@ -9,21 +9,18 @@
   <script defer type="text/javascript" src="js/app.js"></script>
   <title>Portfolio</title>
 
-
 </head>
 
 <body class="bg-purple">
-
-  <div class="cursor" id="cursor"></div>
 
   <header id="header" class=" flex between w100 bg-purple header">
     <img class="personal-logo" src="assets/desktop/header/personal-logo.svg" alt="personal-logo">
       <ul class="" id="list">
        <img class="nav-shape" id="navShape" src="assets/desktop/header/nav-shape.svg" alt="navShape">
-       <a class="text-white nav-choice" id="navChoice" href="#home"><li>Accueil</li></a>
-       <a class="text-white nav-choice" id="navChoice" href="#presentation"><li>Présentation</li></a>
-       <a class="text-white nav-choice" id="navChoice" href="#project"><li>Projets</li></a>
-       <a class="text-white nav-choice" id="navChoice" href="#contact"><li>Contacts</li></a>
+       <a class="text-white nav-choice" id="navChoice" href="#home">Accueil</a>
+       <a class="text-white nav-choice" id="navChoice" href="#presentation">Présentation</a>
+       <a class="text-white nav-choice" id="navChoice" href="#project">Projets</a>
+       <a class="text-white nav-choice" id="navChoice" href="#contact">Contacts</a>
       </ul>
   </header>
 
@@ -67,18 +64,15 @@
     <h2 id="project-title" class="text-blue bold">Projets</h2>
 
     <div class="flex evenly pictures">
-      <img class="individual-pic" id="project1" src="assets/desktop/projets/photo1.jpg" alt="project 1">
-      <img class="individual-pic" id="project2" src="assets/desktop/projets/photo2.jpg" alt="project 2">
+      <img class="individual-pic" id="project1" src="assets/desktop/projets/1.jpg" alt="project 1">
+      <img class="individual-pic" id="project2" src="assets/desktop/projets/2.jpg" alt="project 2">
+      <img class="individual-pic" id="project3" src="assets/desktop/projets/3.jpg" alt="project 3">
     </div>
 
     <div class="flex evenly pictures">
-      <img class="individual-pic" id="project3" src="assets/desktop/projets/photo3.jpg" alt="project 3">
-      <img class="individual-pic" id="project4" src="assets/desktop/projets/photo4.jpg" alt="project 4">
-    </div>
-
-    <div class="flex evenly pictures">
-      <img class="individual-pic" id="project5" src="assets/desktop/projets/photo5.jpg" alt="project 5">
-      <img class="individual-pic" id="project6" src="assets/desktop/projets/photo6.jpg" alt="project 6">
+      <img class="individual-pic" id="project4" src="assets/desktop/projets/4.jpg" alt="project 4">
+      <img class="individual-pic" id="project5" src="assets/desktop/projets/5.jpg" alt="project 5">
+      <img class="individual-pic" id="project6" src="assets/desktop/projets/6.jpg" alt="project 6">
     </div>
 
   </section>

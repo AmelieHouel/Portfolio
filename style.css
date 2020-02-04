@@ -22,12 +22,6 @@
 
 /* Animations */ 
 
-@keyframes cursorChanged {
-  0% {transform: scale(1.2);}
-  50% {transform: scale(1);}
-  100% {transform: scale(1.2);}
-}
-
 @keyframes entry {
   0% {
     opacity: 0; 
@@ -41,7 +35,7 @@
 
 @keyframes opacity {
   0% {opacity: 0;}
-  100% {opacity: 1; }
+  100% {opacity: 1;}
 }
 
 
@@ -78,39 +72,19 @@
 
 * {box-sizing: border-box;}
 
-
-.cursor {
-  content: url('assets/cursor.svg');
-  pointer-events: none; 
-  position: absolute; 
-  width: 40px;
-  height: 40px; 
-  mix-blend-mode: difference;
-  z-index: 11; 
-  transition: transform 0.1s;
-}
-
-.cursor.hover {
-  animation-duration: 0.8s;
-  animation-name: cursorChanged;
-  animation-iteration-count: infinite;
-}
-
 body {
   margin: 0px;
   padding: 0px;
   font-family: "Big john pro", sans-serif;
   color: white;
-  cursor: none;
 }
 
 a {
   text-decoration: none;
-  transition: transform 0.3s;
-  cursor: none;
+  transition: transform 0.2s;
 }
 
-a:hover {transform: scale(1.1);}
+a:hover {transform: scale(1.2);}
 
 /*header*/
 
@@ -121,7 +95,6 @@ header {
 }
 
 .personal-logo {padding: 10px;}
-
 
 ul {
   margin-right: 115px;
@@ -141,17 +114,13 @@ ul {
   left: 10%;
   z-index: 10;
   opacity: 0.6;
-  transition: all 0.4s; 
+  transition: all 0.2s; 
 }
 
 .burger {display: none;}
-.menu {display: none;}
 
 /* heroHeader */
-.hero-header {
-  height: 100vh; 
-  position: relative;
-}
+.hero-header {height: 100vh;}
 
 .hero-titles {
   line-height: 40px;
@@ -193,7 +162,6 @@ ul {
   width: 325px;
   height: auto;
   border-radius: 20px;
-  object-fit: scale-down;
 }
 
 .presentation-container {
@@ -215,6 +183,7 @@ ul {
   font-size: 20px;
   text-align: justify;
 }
+.presentation h2 {text-align: start;}
 
 .aside {
   position: absolute;
@@ -225,48 +194,27 @@ ul {
   right: 20%;
 }
 
-.aside .triangle {padding-top: 20px;}
+.aside .triangle {padding-top: 10px;}
 
-.aside a:hover {
-  animation-duration: 0.5s;
-  animation-name: changefontsize;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
 
 /* Projects */ 
-.projects {margin-top: 400px;}
 
-.projects h2 {
-  padding-top: 50px;
-  font-size: 30px;
-  opacity: 0;
-  transform: translateY(50px) scale(0.8);
-  transition : opacity 0.3s, transform 0.3s;
+.projects {
+  margin-top: 400px;
+  padding: 50px;
 }
 
-.projects h2.is-active {
-  opacity: 1; 
-  transform: none;
-}
-
-.pictures {padding: 30px;}
+.projects h2 {font-size: 30px;}
+.pictures {padding: 20px;}
 
 .individual-pic {
-  margin: 20px;
-  width: 400px;
-  filter: grayscale(1) blur(0.5px);
-  transition: filter 1s;
+  width: 300px;
+  margin: 30px;
   border-radius: 50px;
-  opacity: 0;
-  transform: translateY(50px) scale(0.8);
-  transition : opacity 0.3s, transform 0.3s, filter 0.3s;
+  filter: grayscale(1) blur(0.5px);
+  transition: filter 0.6s;
+  transition : opacity 0.3s, filter 0.3s;
   box-shadow: 5px 5px 10px 0px #cfcfcf;
-}
-
-.individual-pic.is-active {
-  opacity: 1; 
-  transform: none;
 }
 
 .individual-pic:hover {filter: grayscale(0) blur(0px);}
@@ -339,7 +287,9 @@ footer {height: 5vh;}
 
 @media screen and (max-width: 850px) {
 
+
   /* Menu burger */ 
+
  .header {
    transition: all 0.4s;
  }
@@ -446,11 +396,6 @@ footer {height: 5vh;}
     padding: 50px 0px;
   }
 
-  .portrait {
-    width: 309px;
-    border-radius: 30px;
-  }
-
   .presentation-text {
     width: 80%;
     height: 80%;
@@ -500,6 +445,7 @@ footer {height: 5vh;}
     font-size: 18px; 
     padding: 10px 60px; 
   }
+
   .portrait {width: 209px;}
 
   /* Contact */ 
@@ -553,6 +499,7 @@ footer {height: 5vh;}
   header {
     height: auto;
     padding: 5px; 
+    transition: all 0.4s;
   }
   
   .personal-logo {
@@ -569,8 +516,12 @@ footer {height: 5vh;}
 
   /* Présentation */
   .portrait {
-    width: 250px;
+    width: 209px;
     height: auto; 
+  }
+
+  .aside {
+    padding: 10px 40px;
   }
 
   .presentation-text p {font-size: 16px;}
