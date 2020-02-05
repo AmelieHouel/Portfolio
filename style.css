@@ -94,7 +94,7 @@ header {
   z-index: 9;
 }
 
-.personal-logo {padding: 10px;}
+.personal-logo {padding: 15px;}
 
 ul {
   margin-right: 115px;
@@ -120,7 +120,10 @@ ul {
 .burger {display: none;}
 
 /* heroHeader */
-.hero-header {height: 100vh;}
+.hero-header {
+  height: 100vh;
+  position: relative;
+}
 
 .hero-titles {
   line-height: 40px;
@@ -204,17 +207,35 @@ ul {
   padding: 50px;
 }
 
-.projects h2 {font-size: 30px;}
+.projects h2 {
+  font-size: 30px;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition : opacity 0.3s, transform 0.3s;
+}
+
+.projects h2.is-active {
+  opacity: 1; 
+  transform: none;
+}
+
 .pictures {padding: 20px;}
 
 .individual-pic {
   width: 300px;
+  height: 300px;
   margin: 30px;
   border-radius: 50px;
   filter: grayscale(1) blur(0.5px);
-  transition: filter 0.6s;
-  transition : opacity 0.3s, filter 0.3s;
+  opacity: 0;
+  transform: translateY(50px) scale(0.8);
+  transition : opacity 0.3s, transform 0.3s, filter 0.3s;
   box-shadow: 5px 5px 10px 0px #cfcfcf;
+}
+
+.individual-pic.is-active {
+  opacity: 1; 
+  transform: none;
 }
 
 .individual-pic:hover {filter: grayscale(0) blur(0px);}
@@ -271,6 +292,19 @@ button {
   position: absolute; 
   top: -2px; 
 }
+/*message de validation du formulaire */
+
+p.msg-user {
+  font-size: 25px;
+  z-index: 10;
+  text-align: center;
+  margin-top: -50px;
+  color: #8FCBD3;
+  border: 2px solid white;
+  background-color: white;
+  padding: 10px;
+  width: 100vw;
+}
 
 /*footer*/
 footer {height: 5vh;}
@@ -312,14 +346,14 @@ footer {height: 5vh;}
 
   ul {display: none;}
 
+  .personal-logo {padding: 25px;}
   /* Menu Burger */ 
   .burger {
     display: flex;
-    justify-content: center;
-    align-items: center;
     position: fixed; 
     z-index: 10;
-    right: 10px;
+    top: 5px;
+    right: 15px;
     width: 50px;
     height: 50px; 
     margin: 20px;
@@ -366,9 +400,11 @@ footer {height: 5vh;}
 }
 
 .nav-shape {visibility: hidden;}
-
 }
 
+.presentation h2 {
+  text-align: center;
+}
 
 @media screen and (max-width: 800px) {
 
@@ -411,7 +447,7 @@ footer {height: 5vh;}
   /* Projects */
   .individual-pic{
     width: 200px; 
-    height: auto;
+    height: 200px;
   }
 
   .projects {margin-top: 150px;}
@@ -435,10 +471,26 @@ footer {height: 5vh;}
 
 @media screen and (max-width: 450px) {
 
+  .burger {
+    display: flex;
+    position: fixed; 
+    z-index: 10;
+    top: -5px;
+    right: 10px;
+    width: 50px;
+    height: 50px; 
+    margin: 20px;
+  }
+
+  .personal-logo {
+    padding: 12px; 
+  }
   /* Hero Header */ 
   .hero-titles h1 {font-size: 35px;}
   .hero-titles h2, h2 {font-size: 30px;}
   .hero-titles h3, h3 {font-size: 26px;}
+
+
 
   /* Présentation */ 
   .aside {
@@ -458,9 +510,8 @@ footer {height: 5vh;}
 @media screen and (width: 768px) and (height: 1024px) {
 
   /* présentation */
-  .presentation-container {padding-bottom: 80px;}
+  .presentation-container {padding-bottom: 80px; border-radius: 20px;}
   .portrait {width: 325px;}
-  .presentation-text p {margin: 10px 130px;}
 
   .aside {
     padding: 10px 80px;
@@ -486,6 +537,12 @@ footer {height: 5vh;}
     height: 65vh;
     margin-top: 90px; 
   }
+
+  /* projet */
+
+  .individual-pic {
+    margin: 20px; 
+  }
 }
 
 /*Iphone 5*/
@@ -497,15 +554,21 @@ footer {height: 5vh;}
 
   /* Header */ 
   header {
-    height: auto;
-    padding: 5px; 
+    height: 10vh;
+    padding: 10px; 
     transition: all 0.4s;
   }
   
   .personal-logo {
-    padding: 5px;
+    padding: 0px;
     width: 70px;
-    height: auto;
+  }
+
+  .burger {
+    top: -10px; 
+    right: 5px; 
+    width: 40px;
+    height: 40px; 
   }
 
   /* Hero Header */
@@ -553,8 +616,6 @@ footer {height: 5vh;}
     top: -150px; 
   }
 }
-
-
 
 
 

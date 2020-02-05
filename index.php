@@ -22,11 +22,12 @@
        <a class="text-white nav-choice" id="navChoice" href="#project">Projets</a>
        <a class="text-white nav-choice" id="navChoice" href="#contact">Contacts</a>
       </ul>
+      <div class="burger" id="burger" alt="Burger-menu">
+        <div class="line-burger" id="lineBurger"></div>
+      </div>
   </header>
 
-  <div class="burger" id="burger" alt="Burger-menu">
-    <div class="line-burger" id="lineBurger"></div>
-  </div>
+  
 
   <section class="flex center hero-header" id="home">
     <div class="hero-titles">
@@ -84,25 +85,45 @@
     <div class="form-container">
       <h2 class="text-blue bold"> Me contacter </h2>
 
-      <form id="form" action="post.php" method="post">
+      <form id="form"  method="post">
         <div class="flex column">
-            <label class="light text-purple" for="name"> Votre identité : </label>
+            <label class="light text-purple" for="name">Votre identité :</label>
             <input type="text" id="name" name="username" required>
         </div>
         <div class="flex column">
-            <label class="light text-purple" for="mail"> Votre e-mail : </label>
+            <label class="light text-purple" for="mail">Votre e-mail :</label>
             <input type="email" id="mail" name="mail" required>
         </div>
         <div class="flex column">
-            <label class="light text-purple" for="msg"> Votre Message : </label>
+            <label class="light text-purple" for="msg">Votre Message :</label>
             <textarea id="msg" name="user_message" placeholder=" Avez-vous une question ?" required></textarea>
         </div>
         <button class="text-white bold bg-purple" type="submit">Envoyer</button>
       </form>
     </div>
-
-
   </section>
+  <?php
+					try
+					{
+
+            $msg = 'Le message a été enregistré avec succès !';
+						$user = 'amelie';
+						$password = 'rootamelie';
+						$pdo = new PDO('mysql:host=localhost;dbname=portfolio; charset=utf8', $user, $password);
+
+					}
+					catch (Exception $e)
+					{
+						die('Erreur : ' . $e->getMessage());
+					}
+
+					//Envoyer le message
+					$req = $pdo->prepare('INSERT INTO contact (username, mail, user_message, date_message) VALUES(?, ?, ?, NOW())');
+					$resultat = $req->execute(array($_POST['username'], $_POST['mail'], $_POST['user_message']));
+
+					if (count($_POST)>0) echo "<p class=\"msg-user\">$msg</p>";
+
+				?>
 
   <footer class="flex center footer"> 
       <a href="https://github.com/AmelieHouel" target="_blank" class="social"><img  src="assets/desktop/footer/github.svg" alt="icon-github"></a>

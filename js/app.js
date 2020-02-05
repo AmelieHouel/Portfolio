@@ -39,6 +39,22 @@ function waitingH1 () {
   h3.style.opacity='1';
 }
 
+// animation wayponts
+
+var ids =['project-title', 'project1', 'project2', 'project3', 'project4', 'project5', 'project6'];
+
+ids.forEach(function(id) {
+  var element = document.getElementById(id);
+
+  var waypoint = new Waypoint({
+    element: element,
+    handler: function(direction) {
+      element.classList.add('is-active');
+    },
+    offset:'95%'
+  });
+})
+
 // Burger menu
 
 burgerMenu.addEventListener('click', function(){
