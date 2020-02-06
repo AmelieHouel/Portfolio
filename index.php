@@ -32,8 +32,8 @@
   <section class="flex center hero-header" id="home">
     <div class="hero-titles">
       <h1 id="heroH1">Amélie Houël</h1>
-      <h2 class="ta-c" id="heroH2">Developpeuse Web</h2>
-      <h3 class="ta-c light" id="heroH3">UX/UI designer</h3>
+      <h2 id="heroH2">Developpeuse Web</h2>
+      <h3 class="light" id="heroH3">UX/UI designer</h3>
     </div>
     <img class="hero-shape" src="assets/desktop/heroheader/hero-shape.svg" alt="heroHeader-shape">
     <img class="hero-line" src="assets/desktop/heroheader/HeroLine.svg" alt="heroHeader-line">  
@@ -44,18 +44,28 @@
       <img class='portrait' src="assets/desktop/presentation/me.jpg" alt="photo portrait">
 
       <div class="presentation-text"> 
-        <h2 class="ta-c text-blue bold">Présentation</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <h2 class="text-blue bold">Présentation</h2>
+        <p>Il y a un an, j’ai démarré une reconversion professionnelle en intégrant un bachelor Web au sein de l’école HETIC. 
+           En 1 an, j’ai pu y apprendre principalement le design web mais aussi les bases du développement front end et back end. 
+           Aujourd’hui, je me spécialise dans le domaine du développement web afin de rassembler tout ce que je recherche pour ma future 
+           vie professionnelle. L’étude des comportements humains et la créativité avec l’UX/UI design, puis les nouvelles technologies et 
+           la technique avec le développement web. Afin de développer ma pratique et mes compétences dans ce domaine, je suis à la recherche 
+           d'un stage d’une durée de 01 mois à compter du 01 mars 2020.</p>
       </div>
 
       <div class="ta-c flex column center bg-blue aside">
         <a class="text-white" href="./PDF/CV-Amélie Houël-stage.pdf" target = "_blank">
-          <p>Télécharger mon cv</p>
-          <div class="flex column">
-            <img src="assets/desktop/presentation/presentation-line.svg" alt="deco">
-            <img class="triangle" src="assets/desktop/presentation/presentation-triangle.svg" alt="triangle_déco">
-          </div></a>
+          <p>Télécharger mon cv</p></a>
+        <div class="flex column">
+          <img src="assets/desktop/presentation/presentation-line.svg" alt="deco">
+          <img class="triangle" src="assets/desktop/presentation/presentation-triangle.svg" alt="triangle_déco">
+        </div>
+        <a class="text-white" href="PDF/Book-AH1.pdf" target = "_blank">
+          <p>Télécharger mon book</p></a>
+        <div class="flex column">
+          <img src="assets/desktop/presentation/presentation-line.svg" alt="deco">
+          <img class="triangle" src="assets/desktop/presentation/presentation-triangle.svg" alt="triangle_déco">
+        </div>
       </div>
       
     </div>
@@ -88,11 +98,11 @@
       <form id="form"  method="post">
         <div class="flex column">
             <label class="light text-purple" for="name">Votre identité :</label>
-            <input type="text" id="name" name="username" required>
+            <input type="text" id="name" name="username" placeholder="prenom nom" required>
         </div>
         <div class="flex column">
             <label class="light text-purple" for="mail">Votre e-mail :</label>
-            <input type="email" id="mail" name="mail" required>
+            <input type="email" id="mail" name="mail" placeholder="dev@dev.com" required>
         </div>
         <div class="flex column">
             <label class="light text-purple" for="msg">Votre Message :</label>
@@ -101,12 +111,11 @@
         <button class="text-white bold bg-purple" type="submit">Envoyer</button>
       </form>
     </div>
-  </section>
-  <?php
+    <?php
 					try
 					{
 
-            $msg = 'Le message a été enregistré avec succès !';
+            $msg = 'Le message a été envoyé avec succès';
 						$user = 'amelie';
 						$password = 'rootamelie';
 						$pdo = new PDO('mysql:host=localhost;dbname=portfolio; charset=utf8', $user, $password);
@@ -124,6 +133,8 @@
 					if (count($_POST)>0) echo "<p class=\"msg-user\">$msg</p>";
 
 				?>
+  </section>
+  
 
   <footer class="flex center footer"> 
       <a href="https://github.com/AmelieHouel" target="_blank" class="social"><img  src="assets/desktop/footer/github.svg" alt="icon-github"></a>

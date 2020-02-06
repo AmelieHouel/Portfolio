@@ -38,10 +38,7 @@
   100% {opacity: 1;}
 }
 
-
-
 /* flexbox */ 
-
 .flex {display: flex;}
 .center {justify-content: center; align-items: center;}
 .between {justify-content: space-between;}
@@ -49,27 +46,21 @@
 .column {flex-direction: column;}
 
 /* background-color & color */
-
 .bg-purple {background-color: #919FC5;}
 .bg-blue {background-color: #8FCBD3;}
 .bg-white {background-color: white;}
-
 .text-purple {color: #919FC5;}
 .text-blue {color: #8FCBD3;}
 .text-white {color: white;}
 
 /* Font */ 
-
 .bold {font-weight: bold;}
 .light {font-weight: lighter;}
 
 /* width & height*/
-
 .w100 {width:100vw;}
-.ta-c {text-align: center;}
 
 /*body*/
-
 * {box-sizing: border-box;}
 
 body {
@@ -79,20 +70,11 @@ body {
   color: white;
 }
 
-a {
-  text-decoration: none;
-  transition: transform 0.2s;
-}
-
+a {text-decoration: none; transition: transform 0.2s;}
 a:hover {transform: scale(1.2);}
 
 /*header*/
-
-header {
-  height: 10vh;
-  position: fixed;
-  z-index: 9;
-}
+header {position: fixed; z-index: 9;}
 
 .personal-logo {padding: 15px;}
 
@@ -120,15 +102,8 @@ ul {
 .burger {display: none;}
 
 /* heroHeader */
-.hero-header {
-  height: 100vh;
-  position: relative;
-}
-
-.hero-titles {
-  line-height: 40px;
-  margin-right: 10px; 
-}
+.hero-header {height: 100vh; position: relative;}
+.hero-titles {line-height: 40px; margin-right: 10px;}
 
 .hero-titles h1 {
   opacity: 0; 
@@ -139,6 +114,7 @@ ul {
 .hero-titles h2 {
  opacity: 0;
  font-weight: normal;
+ text-align: center;
  animation: opacity 1s; 
  animation-delay: 3s;
 }
@@ -146,24 +122,19 @@ ul {
 .hero-titles h3 {
   opacity: 0;
   font-size: 26px;
+  text-align: center;
   animation: opacity 1s; 
   animation-delay: 3.1s;
 }
 
-.hero-shape {
-  padding-left: 20px;
-  margin-left: 20px;
-}
-
-.hero-line {
-  position: absolute; 
-  bottom: -70px; 
-}
+.hero-shape {padding-left: 20px; margin-left: 20px;}
+.hero-line {position: absolute; bottom: -70px;}
 
 /*présentation*/
 .portrait {
   width: 325px;
   height: auto;
+  padding: 10px; 
   border-radius: 20px;
 }
 
@@ -177,39 +148,32 @@ ul {
 }
 
 .presentation-text {
-  width: 40%;
-  height: auto;
+  width: 600px;
+  padding: 10px;
   color: black; 
 }
 
-.presentation-text p {
-  font-size: 20px;
-  text-align: justify;
-}
+.presentation-text p {font-size: 20px; line-height: 23px;}
 .presentation h2 {text-align: start;}
 
 .aside {
   position: absolute;
   padding: 30px 100px;
   border-radius: 15px;
-  font-size: 25px;
-  bottom: -100px;
+  font-size: 20px;
+  bottom: -200px;
   right: 20%;
 }
 
 .aside .triangle {padding-top: 10px;}
 
-
 /* Projects */ 
-
-.projects {
-  margin-top: 400px;
-  padding: 50px;
-}
+.projects {margin-top: 400px; padding: 50px;}
 
 .projects h2 {
   font-size: 30px;
   opacity: 0;
+  text-align: center;
   transform: translateY(50px) scale(0.8);
   transition : opacity 0.3s, transform 0.3s;
 }
@@ -233,11 +197,7 @@ ul {
   box-shadow: 5px 5px 10px 0px #cfcfcf;
 }
 
-.individual-pic.is-active {
-  opacity: 1; 
-  transform: none;
-}
-
+.individual-pic.is-active {opacity: 1; transform: none;}
 .individual-pic:hover {filter: grayscale(0) blur(0px);}
 
 /*contacts*/
@@ -251,17 +211,12 @@ ul {
   width: 650px; 
   height: auto; 
   position: absolute; 
-  margin-left: 20px;
+  margin-left: 50px;
   z-index: 1;
 }
 
 .form-container {z-index: 2;}
-
-
-label {
-  font-size: 18px;
-  margin: 10px; 
-}
+label {font-size: 18px; margin: 10px;}
 
 input {
   width: 210px;
@@ -288,32 +243,21 @@ button {
   padding: 10px 30px; 
 }
 
-.contact-line {
-  position: absolute; 
-  top: -2px; 
-}
-/*message de validation du formulaire */
+.contact-line {position: absolute; top: -90px;}
 
+/*message de validation du formulaire */
 p.msg-user {
-  font-size: 25px;
-  z-index: 10;
-  text-align: center;
-  margin-top: -50px;
-  color: #8FCBD3;
-  border: 2px solid white;
-  background-color: white;
-  padding: 10px;
-  width: 100vw;
+  z-index: 9999;
+  font-size: 20px;
+  bottom: 0px;
+  background-color: #8FCBD3;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px; 
+  color: white;
 }
 
 /*footer*/
-footer {height: 5vh;}
-
-.social {
-  padding: 10px;
-  transition: transform 0.3s;
-}
-
+.social {padding: 10px; transition: transform 0.3s;}
 .social:hover {transform: scale(1.1);}
 
 
@@ -321,12 +265,10 @@ footer {height: 5vh;}
 
 @media screen and (max-width: 850px) {
 
+  h2 { text-align: center;}
 
   /* Menu burger */ 
-
- .header {
-   transition: all 0.4s;
- }
+ .header {height: 10vh; transition: all 0.3s;}
 
   .is-open {
     height: 80vh;
@@ -346,10 +288,8 @@ footer {height: 5vh;}
 
   ul {display: none;}
 
-  .personal-logo {padding: 25px;}
-  /* Menu Burger */ 
   .burger {
-    display: flex;
+    display: block;
     position: fixed; 
     z-index: 10;
     top: 5px;
@@ -385,34 +325,16 @@ footer {height: 5vh;}
 .line-burger:before {top: -16px;}
 .line-burger:after {top: 16px;}
 
-.burger.active .line-burger {
-  background: rgba(0,0,0,0);
-}
-
-.burger.active .line-burger:before {
-  top: 0;
-  transform: rotate(45deg);
-}
-
-.burger.active .line-burger:after {
-  top: 0;
-  transform: rotate(135deg);
-}
-
+.burger.active .line-burger {background: rgba(0,0,0,0);}
+.burger.active .line-burger:before {top: 0; transform: rotate(45deg);}
+.burger.active .line-burger:after {top: 0; transform: rotate(135deg);}
 .nav-shape {visibility: hidden;}
-}
-
-.presentation h2 {
-  text-align: center;
 }
 
 @media screen and (max-width: 800px) {
 
-  h2{ text-align: center;}
 
   /* HeroHeader */
-  
-
   .hero-shape {
     width: 219px; 
     height: auto; 
@@ -420,32 +342,25 @@ footer {height: 5vh;}
   }
 
   .hero-header {flex-direction: column;}
-
   .hero-line {bottom: -50px;}
 
 
   /* présentation */ 
+  .portrait {
+    padding: 0px;
+  }
   .presentation-container { 
     flex-direction: column;
-    height: auto; 
-    border-radius: 0px;
+    height: auto;
     padding: 50px 0px;
   }
 
-  .presentation-text {
-    width: 80%;
-    height: 80%;
-  }
-
+  .presentation-text {width: 80%; height: 80%;}
   .pictures {flex-wrap: wrap;}
-
-  .aside {
-    position: initial;
-    padding: 10px 100px;
-  }
+  .aside {position: initial; padding: 10px 100px;}
 
   /* Projects */
-  .individual-pic{
+  .individual-pic {
     width: 200px; 
     height: 200px;
   }
@@ -459,6 +374,7 @@ footer {height: 5vh;}
     background-color: white;
     padding: 6%;
     border-radius: 20px;
+    margin-top: 40px;
   }
 
   /*footer*/
@@ -471,40 +387,64 @@ footer {height: 5vh;}
 
 @media screen and (max-width: 450px) {
 
+/* Header */
+
   .burger {
-    display: flex;
-    position: fixed; 
-    z-index: 10;
-    top: -5px;
+    top: -9px;
     right: 10px;
     width: 50px;
     height: 50px; 
     margin: 20px;
   }
 
-  .personal-logo {
-    padding: 12px; 
-  }
+  .personal-logo {width: 90px; padding: 12px;}
+
   /* Hero Header */ 
-  .hero-titles h1 {font-size: 35px;}
-  .hero-titles h2, h2 {font-size: 30px;}
-  .hero-titles h3, h3 {font-size: 26px;}
-
-
+  .hero-titles h1 {font-size: 30px;}
+  .hero-titles h2, h2 {font-size: 25px;}
+  .hero-titles h3, h3 {font-size: 20px;}
 
   /* Présentation */ 
-  .aside {
-    font-size: 18px; 
-    padding: 10px 60px; 
-  }
-
+  .aside {font-size: 18px; padding: 10px 60px;}
   .portrait {width: 209px;}
-
-  /* Contact */ 
-  .contact-line {top: -50px;}
 
 }
 
+/*Iphone 5*/
+@media screen and (max-width: 320px) and (min-height: 568px) {
+
+  /* Header */ 
+  .personal-logo {padding: 5px;padding-top: 8px;}
+
+  .burger {
+    top: -10px; 
+    right: 5px; 
+    width: 40px;
+    height: 40px; 
+  }
+
+  /* Hero Header */
+  .hero-shape {width: 150px; height: auto;}
+
+  /* Présentation */
+  .portrait {width: 209px;height: auto;}
+  .aside {padding: 10px 40px;}
+  .presentation-text p {font-size: 16px;}
+
+  /* Contacts */
+  label {font-size: 16px;margin: 10px;}
+  
+  input {
+    width: 200px;
+    height: 35px; 
+    border-radius: 10px;
+  }
+  
+  textarea {width: 200px; height: 80px;}
+  button {font-size: 16px; margin-top: 20px;}
+  p.msg-user {font-size: 16px; bottom: -15px;}
+  .contact-line {position: absolute; top: -200px;}
+}
 
 /* Ipad */
 @media screen and (width: 768px) and (height: 1024px) {
@@ -512,11 +452,7 @@ footer {height: 5vh;}
   /* présentation */
   .presentation-container {padding-bottom: 80px; border-radius: 20px;}
   .portrait {width: 325px;}
-
-  .aside {
-    padding: 10px 80px;
-    margin-top: 50px;
-  }
+  .aside {padding: 10px 80px; margin-top: 50px;}
 
   /* projects */
   .projects {margin-top: 300px;}
@@ -527,96 +463,11 @@ footer {height: 5vh;}
 @media screen and (width: 1024px) and (height: 1366px) {
 
   /* Hero Header */
-  .hero-line {
-    position: absolute; 
-    bottom: -90px; 
-  }
+  .hero-line {position: absolute; bottom: -90px;}
 
   /* présentation */
-  .presentation-container {
-    height: 65vh;
-    margin-top: 90px; 
-  }
+  .presentation-container {height: 65vh; margin-top: 90px;}
 
   /* projet */
-
-  .individual-pic {
-    margin: 20px; 
-  }
+  .individual-pic {margin: 20px;}
 }
-
-/*Iphone 5*/
-@media screen and (max-width: 320px) and (min-height: 568px) {
-
-  .hero-titles h1 {font-size: 30px;}
-  .hero-titles h2, h2 {font-size: 25px;}
-  .hero-titles h3, h3 {font-size: 20px;}
-
-  /* Header */ 
-  header {
-    height: 10vh;
-    padding: 10px; 
-    transition: all 0.4s;
-  }
-  
-  .personal-logo {
-    padding: 0px;
-    width: 70px;
-  }
-
-  .burger {
-    top: -10px; 
-    right: 5px; 
-    width: 40px;
-    height: 40px; 
-  }
-
-  /* Hero Header */
-  .hero-shape {
-    width: 150px; 
-    height: auto;
-  }
-
-  /* Présentation */
-  .portrait {
-    width: 209px;
-    height: auto; 
-  }
-
-  .aside {
-    padding: 10px 40px;
-  }
-
-  .presentation-text p {font-size: 16px;}
-
-  /* Contacts */
-  label {
-    font-size: 16px;
-    margin: 10px; 
-  }
-  
-  input {
-    width: 200px;
-    height: 35px; 
-    border-radius: 10px;
-  }
-  
-  textarea {
-    width: 200px;
-    height: 80px;
-  }
-  
-  button {
-    font-size: 16px; 
-    margin-top: 20px;
-  }
-  
-  .contact-line {
-    position: absolute; 
-    top: -150px; 
-  }
-}
-
-
-
-
