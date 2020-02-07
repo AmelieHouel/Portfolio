@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="js/wayponts.js"></script>
   <script defer type="text/javascript" src="js/app.js"></script>
-  <title>Portfolio</title>
+  <title>Amélie Houël | Portfolio</title>
 
 </head>
 
