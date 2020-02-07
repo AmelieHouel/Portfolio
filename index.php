@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
   <link rel="stylesheet" href="style.css">
   <script type="text/javascript" src="js/wayponts.js"></script>
   <script defer type="text/javascript" src="js/app.js"></script>
@@ -14,7 +15,7 @@
 <body class="bg-purple">
 
   <header id="header" class=" flex between w100 bg-purple header">
-    <img class="personal-logo" src="assets/desktop/header/personal-logo.svg" alt="personal-logo">
+      <img class="personal-logo" src="assets/desktop/header/personal-logo.svg" alt="personal-logo"> 
       <ul class="" id="list">
        <img class="nav-shape" id="navShape" src="assets/desktop/header/nav-shape.svg" alt="navShape">
        <a class="text-white nav-choice" id="navChoice" href="#home">Accueil</a>
@@ -54,13 +55,13 @@
       </div>
 
       <div class="ta-c flex column center bg-blue aside">
-        <a class="text-white" href="./PDF/CV-Amélie Houël-stage.pdf" target = "_blank">
+        <a class="text-white" href="assets/PDF/CV-Amélie Houël-stage.pdf" target = "_blank">
           <p>Télécharger mon cv</p></a>
         <div class="flex column">
           <img src="assets/desktop/presentation/presentation-line.svg" alt="deco">
           <img class="triangle" src="assets/desktop/presentation/presentation-triangle.svg" alt="triangle_déco">
         </div>
-        <a class="text-white" href="PDF/Book-AH1.pdf" target = "_blank">
+        <a class="text-white" href="assets/PDF/Book-AH1.pdf" target = "_blank">
           <p>Télécharger mon book</p></a>
         <div class="flex column">
           <img src="assets/desktop/presentation/presentation-line.svg" alt="deco">
