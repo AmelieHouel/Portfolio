@@ -72,7 +72,7 @@
   </section>
 
   <section class="bg-white ta-c projects" id="project">
-    <h2 id="project-title" class="text-blue bold">Projets</h2>
+    <h2 id="project-title" class="text-blue bold">Projets ( <span>en construction</span> )</h2>
 
     <div class="flex evenly pictures">
       <img class="individual-pic" id="project1" src="assets/desktop/projets/1.jpg" alt="project 1">
@@ -111,28 +111,7 @@
         <button class="text-white bold bg-purple" type="submit">Envoyer</button>
       </form>
     </div>
-    <?php
-					try
-					{
-
-            $msg = 'Le message a été envoyé avec succès';
-						$user = 'amelie';
-						$password = 'rootamelie';
-						$pdo = new PDO('mysql:host=localhost;dbname=portfolio; charset=utf8', $user, $password);
-
-					}
-					catch (Exception $e)
-					{
-						die('Erreur : ' . $e->getMessage());
-					}
-
-					//Envoyer le message
-					$req = $pdo->prepare('INSERT INTO contact (username, mail, user_message, date_message) VALUES(?, ?, ?, NOW())');
-					$resultat = $req->execute(array($_POST['username'], $_POST['mail'], $_POST['user_message']));
-
-					if (count($_POST)>0) echo "<p class=\"msg-user\">$msg</p>";
-
-				?>
+    <?php require('post.php');  ?>
   </section>
   
 

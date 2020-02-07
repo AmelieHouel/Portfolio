@@ -168,6 +168,8 @@ ul {
 .aside .triangle {padding-top: 10px;}
 
 /* Projects */ 
+
+span {color:black;}
 .projects {margin-top: 400px; padding: 50px;}
 
 .projects h2 {
