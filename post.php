@@ -3,9 +3,9 @@
     {
 
       $msg = 'Le message a été envoyé avec succès';
-      $user = 'hoam4690';
+      $user = 'hoam3649';
       $password = '6KAxr3cL6*Qy';
-      $pdo = new PDO('mysql:host=localhost;dbname=hoam4690_portfolio; charset=utf8', $user, $password);
+      $pdo = new PDO('mysql:host=localhost;dbname=hoam3649_portfolio; charset=utf8', $user, $password);
 
     }
     catch (Exception $e)

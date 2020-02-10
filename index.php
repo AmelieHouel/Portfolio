@@ -40,8 +40,8 @@
     <img class="hero-line" src="assets/desktop/heroheader/HeroLine.svg" alt="heroHeader-line">  
   </section>
 
-  <section class="flex center column presentation" id="presentation">
-    <div class="bg-white flex evenly w100 presentation-container"> 
+  <section class="flex center w100 presentation" id="presentation">
+    <div class="bg-white flex evenly presentation-container"> 
       <img class='portrait' src="assets/desktop/presentation/me.jpg" alt="photo portrait">
 
       <div class="presentation-text"> 
@@ -72,7 +72,7 @@
     </div>
   </section>
 
-  <section class="bg-white ta-c projects" id="project">
+  <section class="bg-white w100 ta-c projects" id="project">
     <h2 id="project-title" class="text-blue bold">Projets ( <span>en construction</span> )</h2>
 
     <div class="flex evenly pictures">
@@ -96,7 +96,7 @@
     <div class="form-container">
       <h2 class="text-blue bold"> Me contacter </h2>
 
-      <form id="form"  method="post">
+      <form class="form" id="form"  method="post">
         <div class="flex column">
             <label class="light text-purple" for="name">Votre identité :</label>
             <input type="text" id="name" name="username" placeholder="prenom nom" required>
