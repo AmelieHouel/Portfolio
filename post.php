@@ -3,7 +3,7 @@
     {
 
       $msg = 'Le message a été envoyé avec succès';
-      $user = 'hoam3649';
+      $user = 'hoam4690';
       $password = '6KAxr3cL6*Qy';
       $pdo = new PDO('mysql:host=localhost;dbname=hoam3649_portfolio; charset=utf8', $user, $password);
 
